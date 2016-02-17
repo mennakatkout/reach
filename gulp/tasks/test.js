@@ -89,11 +89,11 @@ const
 			version: 'beta',
 			proxy
 		},
-		sl_firefox_dev: {
+		sl_firefox_43: {
 			base: 'SauceLabs',
 			browserName: 'firefox',
 			platform: 'OS X 10.11',
-			version: 'dev',
+			version: '43',
 			proxy
 		},
 		sl_firefox_30: {
