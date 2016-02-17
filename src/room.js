@@ -806,7 +806,6 @@ export default function (p_me, p_roomId, datarefs, webrtcmngr) {
 		});
 		roomWebrtcStacks = {};
 
-
 		mMutedStreams = [];
 
 		_removeAllAvailableStreams();
@@ -814,6 +813,24 @@ export default function (p_me, p_roomId, datarefs, webrtcmngr) {
 			dataref.child('commonDataList/status').set(ROOM_STATUS_CLOSE);
 		}
 
+		// Force localstream close
+		localstream.close();
+	}
+
+	/**
+	 * Switches between cameras.
+	 * @param streamId - The identifier of the stream to publish
+	 * @param localVideoStream - The local video
+	 * @param actionType -
+	 */
+	function _switchCamera(streamId, actionType, localVideoStream){
+		// Change camera
+		localstream.setVideoNumber(localstream.getVideoNumber() === 1 ? 2 : 1);
+		// Force stream close
+		localstream.close();
+		_unPublishStream(streamId, () => console.log('unpublishedStream'));
+		// Re-publish
+		_publishStream(streamId, localVideoStream, actionType, res => console.log(res));
 	}
 
 	init();
@@ -951,6 +968,13 @@ export default function (p_me, p_roomId, datarefs, webrtcmngr) {
 				console.err(`(ReachSDK::room[${roomId}]::on)unsupported ${evt} event`);
 				break;
 			}
-		}
+		},
+		/**
+		 * Switches between cameras.
+		 * @param streamId - The identifier of the stream to publish
+		 * @param localVideoStream - The local video
+		 * @param actionType -
+		 */
+		switchCamera: _switchCamera
 	};
 }
