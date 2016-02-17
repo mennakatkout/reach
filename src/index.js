@@ -33,4 +33,6 @@ export class Reach {
 	}
 }
 
+global.ComSDK = Reach;
+
 module.exports = Reach;
