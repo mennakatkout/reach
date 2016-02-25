@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/core/Room.js | Reach API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+https://github.com/webcom-components/reach.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Reach.js~Reach.html">Reach</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">core</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/Invite.js~Invite.html">Invite</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/Room.js~Room.html">Room</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/User.js~User.html">User</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">definitions</div><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BrowserDetails">BrowserDetails</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Events">Events</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ICEServer">ICEServer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ReachConfig">ReachConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StreamTypes">StreamTypes</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">external</div><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://webcom.orange.com/doc/Webcom.html">Webcom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/core/Room.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Room informations
+ * @public
+ */
+export default class Room {
+	/**
+	 * Get the room unique id
+	 * @type {string}
+	 */
+	get uid(){
+		return &apos;&apos;;
+	}
+
+	/**
+	 * Get the room name
+	 * @type {string}
+	 */
+	get name(){
+		return &apos;&apos;;
+	}
+
+	/**
+	 * Get the room owner uid
+	 * @type {string}
+	 */
+	get owner() {
+		return &apos;&apos;;
+	}
+	/**
+	 * Get the room status
+	 * @type {RoomStatus}
+	 */
+	get status() {
+		return &apos;&apos;;
+	}
+
+	/**
+	 * Get the list of participants.
+	 * This will only work if the user is either a participant or the owner of the room.
+	 * @returns {Promise&lt;Participant[], Error&gt;}
+	 */
+	participants() {
+		return new Promise();
+	}
+
+	/**
+	 * Get the list of messages.
+	 * This will only work if the user is either a participant or the owner of the room.
+	 * @return {Promise&lt;Message[], Error&gt;}
+	 */
+	messages() {
+		return new Promise();
+	}
+
+	/**
+	 * Get the list of published streams.
+	 * This will only work if the user is either a participant or the owner of the room.
+	 * @return {Promise&lt;Stream[], Error&gt;}
+	 */
+	streams() {
+		return new Promise();
+	}
+
+	/**
+	 * Invite users to the room. this will only work if the current User is the owner or a moderator of this Room.
+	 * This will create the invitation and add the user to the participants list.
+	 * @param {User[]} users the users to invite
+	 * @param {string} [role=&apos;NONE&apos;] the role of the invitee
+	 * @param {string} [message] a message to add to the invite
+	 * @return {Promise&lt;{room: Room, invite: Invite}&gt;, Error}
+	 */
+	invite(users, role = &apos;NONE&apos;, message) {
+		return new Promise({users, role, message});
+	}
+
+	/**
+	 * Register a callback for a specific event
+	 * @param {string} event The event name.
+	 * @param {function} callback The callback for the event
+	 */
+	on(event, callback) {
+		switch (event) {
+		case &apos;PARTICIPANT_ADDED&apos;:
+			break;
+		case &apos;PARTICIPANT_CHANGED&apos;:
+			break;
+		case &apos;PARTICIPANT_REMOVED&apos;:
+			break;
+		case &apos;MESSAGE_ADDED&apos;:
+			break;
+		case &apos;MESSAGE_CHANGED&apos;:
+			break;
+		case &apos;MESSAGE_REMOVED&apos;:
+			break;
+		case &apos;STREAM_PUBLISHED&apos;:
+			break;
+		case &apos;STREAM_CHANGED&apos;:
+			break;
+		case &apos;STREAM_UNPUBLISHED&apos;:
+			break;
+		}
+		callback();
+	}
+
+	/**
+	 * Send an instant message
+	 * @param {string} message The message to send
+	 * @return {Promise}
+	 */
+	sendMessage(message) {
+		return new Promise(message);
+	}
+
+	/**
+	 * Publish a local stream
+	 * @param {StreamType} type The stream type
+	 * @param {?Element} localStreamElement The element the stream is attached to. Can be null if already specified in ReachConfig.
+	 * @param {?MediaConstraints} constraints The stream constraints. If not defined the constraints defined in ReachConfig will be used.
+	 * @returns {Promise&lt;Stream, Error&gt;}
+	 */
+	publishStream(type, localStreamElement, constraints) {
+		return new Promise({type, localStreamElement, constraints});
+	}
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.5)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

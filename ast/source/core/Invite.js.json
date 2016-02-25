@@ -1,0 +1,2836 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "ONGOING",
+            "range": [
+              8,
+              15
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 8
+              },
+              "end": {
+                "line": 1,
+                "column": 15
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "ONGOING",
+            "range": [
+              8,
+              15
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 8
+              },
+              "end": {
+                "line": 1,
+                "column": 15
+              }
+            }
+          },
+          "range": [
+            8,
+            15
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 15
+            }
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "ACCEPTED",
+            "range": [
+              17,
+              25
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 17
+              },
+              "end": {
+                "line": 1,
+                "column": 25
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "ACCEPTED",
+            "range": [
+              17,
+              25
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 17
+              },
+              "end": {
+                "line": 1,
+                "column": 25
+              }
+            }
+          },
+          "range": [
+            17,
+            25
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 17
+            },
+            "end": {
+              "line": 1,
+              "column": 25
+            }
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "REJECTED",
+            "range": [
+              27,
+              35
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 27
+              },
+              "end": {
+                "line": 1,
+                "column": 35
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "REJECTED",
+            "range": [
+              27,
+              35
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 27
+              },
+              "end": {
+                "line": 1,
+                "column": 35
+              }
+            }
+          },
+          "range": [
+            27,
+            35
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 35
+            }
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "CANCELED",
+            "range": [
+              37,
+              45
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 37
+              },
+              "end": {
+                "line": 1,
+                "column": 45
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "CANCELED",
+            "range": [
+              37,
+              45
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 37
+              },
+              "end": {
+                "line": 1,
+                "column": 45
+              }
+            }
+          },
+          "range": [
+            37,
+            45
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 37
+            },
+            "end": {
+              "line": 1,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "../constants",
+        "raw": "'../constants'",
+        "range": [
+          52,
+          66
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 52
+          },
+          "end": {
+            "line": 1,
+            "column": 66
+          }
+        }
+      },
+      "range": [
+        0,
+        67
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 67
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Invitation\n * @access protected\n ",
+          "range": [
+            69,
+            111
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "Invite",
+          "range": [
+            133,
+            139
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 21
+            },
+            "end": {
+              "line": 7,
+              "column": 27
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "room",
+                "range": [
+                  212,
+                  216
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 9
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          230,
+                          234
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "range": [
+                        223,
+                        235
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 14
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    219,
+                    238
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  216,
+                  238
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                208,
+                238
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 1
+                },
+                "end": {
+                  "line": 14,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The room associated to the invite\n\t * @type {Room}\n\t ",
+                  "range": [
+                    143,
+                    206
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation status :\n\t * - ONGOING - The receiver has not yet responded to the invitation\n\t * - ACCEPTED - The receiver has accepted the invitation\n\t * - REJECTED - The receiver has rejected the invitation\n\t * - CANCELED - The sender canceled the invitation\n\t * @type {string}\n\t ",
+                  "range": [
+                    241,
+                    533
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "status",
+                "range": [
+                  539,
+                  545
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "",
+                        "raw": "''",
+                        "range": [
+                          559,
+                          561
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "range": [
+                        552,
+                        562
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 12
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    548,
+                    565
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  545,
+                  565
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                535,
+                565
+              ],
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 1
+                },
+                "end": {
+                  "line": 26,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation status :\n\t * - ONGOING - The receiver has not yet responded to the invitation\n\t * - ACCEPTED - The receiver has accepted the invitation\n\t * - REJECTED - The receiver has rejected the invitation\n\t * - CANCELED - The sender canceled the invitation\n\t * @type {string}\n\t ",
+                  "range": [
+                    241,
+                    533
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Is this invitation waiting for a reply ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    568,
+                    641
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "isOnGoing",
+                "range": [
+                  647,
+                  656
+                ],
+                "loc": {
+                  "start": {
+                    "line": 32,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 32,
+                    "column": 14
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "BinaryExpression",
+                        "operator": "===",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              670,
+                              674
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 33,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 33,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "status",
+                            "range": [
+                              675,
+                              681
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 33,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 33,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            670,
+                            681
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "ONGOING",
+                          "range": [
+                            686,
+                            693
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 32
+                            }
+                          }
+                        },
+                        "range": [
+                          670,
+                          693
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 32
+                          }
+                        }
+                      },
+                      "range": [
+                        663,
+                        694
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 33,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 33,
+                          "column": 33
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    659,
+                    697
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 32,
+                      "column": 17
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  656,
+                  697
+                ],
+                "loc": {
+                  "start": {
+                    "line": 32,
+                    "column": 14
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                643,
+                697
+              ],
+              "loc": {
+                "start": {
+                  "line": 32,
+                  "column": 1
+                },
+                "end": {
+                  "line": 34,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Is this invitation waiting for a reply ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    568,
+                    641
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation rejected ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    700,
+                    763
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 36,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "isRejected",
+                "range": [
+                  769,
+                  779
+                ],
+                "loc": {
+                  "start": {
+                    "line": 40,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 40,
+                    "column": 15
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "BinaryExpression",
+                        "operator": "===",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              793,
+                              797
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 41,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 41,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "status",
+                            "range": [
+                              798,
+                              804
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 41,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 41,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            793,
+                            804
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 41,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 41,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "REJECTED",
+                          "range": [
+                            809,
+                            817
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 41,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 41,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          793,
+                          817
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 41,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 41,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        786,
+                        818
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 41,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 41,
+                          "column": 34
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    782,
+                    821
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 40,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 42,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  779,
+                  821
+                ],
+                "loc": {
+                  "start": {
+                    "line": 40,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 42,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                765,
+                821
+              ],
+              "loc": {
+                "start": {
+                  "line": 40,
+                  "column": 1
+                },
+                "end": {
+                  "line": 42,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation rejected ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    700,
+                    763
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 36,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation accepted ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    824,
+                    887
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 44,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "isAccepted",
+                "range": [
+                  893,
+                  903
+                ],
+                "loc": {
+                  "start": {
+                    "line": 48,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 15
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "BinaryExpression",
+                        "operator": "===",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              917,
+                              921
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 49,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 49,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "status",
+                            "range": [
+                              922,
+                              928
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 49,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 49,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            917,
+                            928
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 49,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 49,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "ACCEPTED",
+                          "range": [
+                            933,
+                            941
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 49,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 49,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          917,
+                          941
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 49,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        910,
+                        942
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 49,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 49,
+                          "column": 34
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    906,
+                    945
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 50,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  903,
+                  945
+                ],
+                "loc": {
+                  "start": {
+                    "line": 48,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 50,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                889,
+                945
+              ],
+              "loc": {
+                "start": {
+                  "line": 48,
+                  "column": 1
+                },
+                "end": {
+                  "line": 50,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation accepted ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    824,
+                    887
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 44,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation canceled ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    948,
+                    1011
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 52,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "isCanceled",
+                "range": [
+                  1017,
+                  1027
+                ],
+                "loc": {
+                  "start": {
+                    "line": 56,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 56,
+                    "column": 15
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "BinaryExpression",
+                        "operator": "===",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1041,
+                              1045
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 57,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 57,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "status",
+                            "range": [
+                              1046,
+                              1052
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 57,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 57,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            1041,
+                            1052
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 57,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 57,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "CANCELED",
+                          "range": [
+                            1057,
+                            1065
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 57,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 57,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          1041,
+                          1065
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 57,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 57,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        1034,
+                        1066
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 57,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 57,
+                          "column": 34
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1030,
+                    1069
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 56,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 58,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1027,
+                  1069
+                ],
+                "loc": {
+                  "start": {
+                    "line": 56,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 58,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1013,
+                1069
+              ],
+              "loc": {
+                "start": {
+                  "line": 56,
+                  "column": 1
+                },
+                "end": {
+                  "line": 58,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Was this invitation canceled ?\n\t * @type {boolean}\n\t ",
+                  "range": [
+                    948,
+                    1011
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 52,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation sender\n\t * @type {string}\n\t ",
+                  "range": [
+                    1072,
+                    1125
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 63,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "from",
+                "range": [
+                  1131,
+                  1135
+                ],
+                "loc": {
+                  "start": {
+                    "line": 64,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 9
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "",
+                        "raw": "''",
+                        "range": [
+                          1149,
+                          1151
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 65,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "range": [
+                        1142,
+                        1152
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 65,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 65,
+                          "column": 12
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1138,
+                    1155
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 64,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 66,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1135,
+                  1155
+                ],
+                "loc": {
+                  "start": {
+                    "line": 64,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 66,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1127,
+                1155
+              ],
+              "loc": {
+                "start": {
+                  "line": 64,
+                  "column": 1
+                },
+                "end": {
+                  "line": 66,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation sender\n\t * @type {string}\n\t ",
+                  "range": [
+                    1072,
+                    1125
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 63,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation receiver\n\t * @type {string}\n\t ",
+                  "range": [
+                    1158,
+                    1213
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 68,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 71,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "to",
+                "range": [
+                  1219,
+                  1221
+                ],
+                "loc": {
+                  "start": {
+                    "line": 72,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 72,
+                    "column": 7
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "",
+                        "raw": "''",
+                        "range": [
+                          1235,
+                          1237
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 73,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 73,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "range": [
+                        1228,
+                        1238
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 73,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 73,
+                          "column": 12
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1224,
+                    1241
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 72,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 74,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1221,
+                  1241
+                ],
+                "loc": {
+                  "start": {
+                    "line": 72,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 74,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1215,
+                1241
+              ],
+              "loc": {
+                "start": {
+                  "line": 72,
+                  "column": 1
+                },
+                "end": {
+                  "line": 74,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation receiver\n\t * @type {string}\n\t ",
+                  "range": [
+                    1158,
+                    1213
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 68,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 71,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation cancel/reject reason if present\n\t * @type {?string}\n\t ",
+                  "range": [
+                    1244,
+                    1323
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 76,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 79,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "reason",
+                "range": [
+                  1329,
+                  1335
+                ],
+                "loc": {
+                  "start": {
+                    "line": 80,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 80,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          1349,
+                          1353
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 81,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 81,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "range": [
+                        1342,
+                        1354
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 81,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 81,
+                          "column": 14
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1338,
+                    1357
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 80,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 82,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1335,
+                  1357
+                ],
+                "loc": {
+                  "start": {
+                    "line": 80,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 82,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1325,
+                1357
+              ],
+              "loc": {
+                "start": {
+                  "line": 80,
+                  "column": 1
+                },
+                "end": {
+                  "line": 82,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * The invitation cancel/reject reason if present\n\t * @type {?string}\n\t ",
+                  "range": [
+                    1244,
+                    1323
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 76,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 79,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Cancels the invitation. Only the sender can cancel the invitation.\n\t * @param {string} [reason] The reason the sender is canceling the invite\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1359,
+                    1535
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 83,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 87,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "cancel",
+                "range": [
+                  1537,
+                  1543
+                ],
+                "loc": {
+                  "start": {
+                    "line": 88,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 88,
+                    "column": 7
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Promise",
+                          "range": [
+                            1561,
+                            1568
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 89,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 89,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "range": [
+                          1557,
+                          1570
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 89,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 89,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "range": [
+                        1550,
+                        1571
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 89,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 89,
+                          "column": 23
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1546,
+                    1574
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 88,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 90,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1543,
+                  1574
+                ],
+                "loc": {
+                  "start": {
+                    "line": 88,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 90,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                1537,
+                1574
+              ],
+              "loc": {
+                "start": {
+                  "line": 88,
+                  "column": 1
+                },
+                "end": {
+                  "line": 90,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Cancels the invitation. Only the sender can cancel the invitation.\n\t * @param {string} [reason] The reason the sender is canceling the invite\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1359,
+                    1535
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 83,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 87,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Rejects the invitation. Only the reveicer can reject the invitation.\n\t * @param {string} [reason] The reason the receiver is rejecting the invite\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1577,
+                    1757
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 92,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 96,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "reject",
+                "range": [
+                  1759,
+                  1765
+                ],
+                "loc": {
+                  "start": {
+                    "line": 97,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 97,
+                    "column": 7
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "reason",
+                    "range": [
+                      1766,
+                      1772
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 97,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 14
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Promise",
+                          "range": [
+                            1789,
+                            1796
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 98,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 98,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "reason",
+                            "range": [
+                              1797,
+                              1803
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 98,
+                                "column": 21
+                              },
+                              "end": {
+                                "line": 98,
+                                "column": 27
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1785,
+                          1804
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 98,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 98,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "range": [
+                        1778,
+                        1805
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 98,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 98,
+                          "column": 29
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1774,
+                    1808
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 97,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 99,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1765,
+                  1808
+                ],
+                "loc": {
+                  "start": {
+                    "line": 97,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 99,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                1759,
+                1808
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 1
+                },
+                "end": {
+                  "line": 99,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Rejects the invitation. Only the reveicer can reject the invitation.\n\t * @param {string} [reason] The reason the receiver is rejecting the invite\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1577,
+                    1757
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 92,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 96,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Accept the invitation. Only the reveicer can accept the invitation.\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1811,
+                    1913
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 101,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "accept",
+                "range": [
+                  1915,
+                  1921
+                ],
+                "loc": {
+                  "start": {
+                    "line": 105,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 105,
+                    "column": 7
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Promise",
+                          "range": [
+                            1939,
+                            1946
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 106,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 106,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "range": [
+                          1935,
+                          1948
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 106,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 106,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "range": [
+                        1928,
+                        1949
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 106,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 106,
+                          "column": 23
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1924,
+                    1952
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 105,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 107,
+                      "column": 2
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1921,
+                  1952
+                ],
+                "loc": {
+                  "start": {
+                    "line": 105,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 107,
+                    "column": 2
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                1915,
+                1952
+              ],
+              "loc": {
+                "start": {
+                  "line": 105,
+                  "column": 1
+                },
+                "end": {
+                  "line": 107,
+                  "column": 2
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n\t * Accept the invitation. Only the reveicer can accept the invitation.\n\t * @return {Promise}\n\t ",
+                  "range": [
+                    1811,
+                    1913
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 101,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 4
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            140,
+            1954
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 28
+            },
+            "end": {
+              "line": 108,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          127,
+          1954
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 15
+          },
+          "end": {
+            "line": 108,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Invitation\n * @access protected\n ",
+            "range": [
+              69,
+              111
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        112,
+        1954
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 108,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Invitation\n * @access protected\n ",
+          "range": [
+            69,
+            111
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    1954
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 108,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Invitation\n * @access protected\n ",
+      "range": [
+        69,
+        111
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * The room associated to the invite\n\t * @type {Room}\n\t ",
+      "range": [
+        143,
+        206
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 1
+        },
+        "end": {
+          "line": 11,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * The invitation status :\n\t * - ONGOING - The receiver has not yet responded to the invitation\n\t * - ACCEPTED - The receiver has accepted the invitation\n\t * - REJECTED - The receiver has rejected the invitation\n\t * - CANCELED - The sender canceled the invitation\n\t * @type {string}\n\t ",
+      "range": [
+        241,
+        533
+      ],
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 1
+        },
+        "end": {
+          "line": 23,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Is this invitation waiting for a reply ?\n\t * @type {boolean}\n\t ",
+      "range": [
+        568,
+        641
+      ],
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 1
+        },
+        "end": {
+          "line": 31,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Was this invitation rejected ?\n\t * @type {boolean}\n\t ",
+      "range": [
+        700,
+        763
+      ],
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 1
+        },
+        "end": {
+          "line": 39,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Was this invitation accepted ?\n\t * @type {boolean}\n\t ",
+      "range": [
+        824,
+        887
+      ],
+      "loc": {
+        "start": {
+          "line": 44,
+          "column": 1
+        },
+        "end": {
+          "line": 47,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Was this invitation canceled ?\n\t * @type {boolean}\n\t ",
+      "range": [
+        948,
+        1011
+      ],
+      "loc": {
+        "start": {
+          "line": 52,
+          "column": 1
+        },
+        "end": {
+          "line": 55,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * The invitation sender\n\t * @type {string}\n\t ",
+      "range": [
+        1072,
+        1125
+      ],
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 1
+        },
+        "end": {
+          "line": 63,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * The invitation receiver\n\t * @type {string}\n\t ",
+      "range": [
+        1158,
+        1213
+      ],
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 1
+        },
+        "end": {
+          "line": 71,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * The invitation cancel/reject reason if present\n\t * @type {?string}\n\t ",
+      "range": [
+        1244,
+        1323
+      ],
+      "loc": {
+        "start": {
+          "line": 76,
+          "column": 1
+        },
+        "end": {
+          "line": 79,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Cancels the invitation. Only the sender can cancel the invitation.\n\t * @param {string} [reason] The reason the sender is canceling the invite\n\t * @return {Promise}\n\t ",
+      "range": [
+        1359,
+        1535
+      ],
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 1
+        },
+        "end": {
+          "line": 87,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Rejects the invitation. Only the reveicer can reject the invitation.\n\t * @param {string} [reason] The reason the receiver is rejecting the invite\n\t * @return {Promise}\n\t ",
+      "range": [
+        1577,
+        1757
+      ],
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 1
+        },
+        "end": {
+          "line": 96,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n\t * Accept the invitation. Only the reveicer can accept the invitation.\n\t * @return {Promise}\n\t ",
+      "range": [
+        1811,
+        1913
+      ],
+      "loc": {
+        "start": {
+          "line": 101,
+          "column": 1
+        },
+        "end": {
+          "line": 104,
+          "column": 4
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/definitions/Events.js | Reach API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+https://github.com/webcom-components/reach.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Reach.js~Reach.html">Reach</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">core</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/Invite.js~Invite.html">Invite</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/Room.js~Room.html">Room</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/core/User.js~User.html">User</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">definitions</div><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BrowserDetails">BrowserDetails</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Events">Events</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ICEServer">ICEServer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ReachConfig">ReachConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StreamTypes">StreamTypes</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">external</div><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://webcom.orange.com/doc/Webcom.html">Webcom</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/definitions/Events.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * The supported events by Reach#on, Room#on, Stream#on...
+ * @typedef {Object} Events
+ * @property {string} USER_ADDED=&apos;USER_ADDED&apos;
+ * @property {string} USER_CHANGED=&apos;USER_CHANGED&apos;
+ * @property {string} USER_REMOVED=&apos;USER_REMOVED&apos;
+ * @property {string} ROOM_ADDED=&apos;ROOM_ADDED&apos;
+ * @property {string} ROOM_CHANGED=&apos;ROOM_CHANGED&apos;
+ * @property {string} ROOM_REMOVED=&apos;ROOM_REMOVED&apos;
+ * @property {string} INVITE_ADDED=&apos;INVITE_ADDED&apos;
+ * @property {string} INVITE_CHANGED=&apos;INVITE_CHANGED&apos;
+ * @property {string} PARTICIPANT_ADDED=&apos;PARTICIPANT_ADDED&apos;
+ * @property {string} PARTICIPANT_CHANGED=&apos;PARTICIPANT_CHANGED&apos;
+ * @property {string} PARTICIPANT_REMOVED=&apos;PARTICIPANT_REMOVED&apos;
+ * @property {string} MESSAGE_ADDED=&apos;MESSAGE_ADDED&apos;
+ * @property {string} MESSAGE_CHANGED=&apos;MESSAGE_CHANGED&apos;
+ * @property {string} MESSAGE_REMOVED=&apos;MESSAGE_REMOVED&apos;
+ * @property {string} STREAM_PUBLISHED=&apos;STREAM_PUBLISHED&apos;
+ * @property {string} STREAM_CHANGED=&apos;STREAM_CHANGED&apos;
+ * @property {string} STREAM_UNPUBLISHED=&apos;STREAM_UNPUBLISHED&apos;
+ */
+/**
+* @ignore
+*/
+export const USER_ADDED = &apos;USER_ADDED&apos;;
+/**
+* @ignore
+*/
+export const USER_CHANGED = &apos;USER_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const USER_REMOVED = &apos;USER_REMOVED&apos;;
+/**
+* @ignore
+*/
+export const ROOM_ADDED = &apos;ROOM_ADDED&apos;;
+/**
+* @ignore
+*/
+export const ROOM_CHANGED = &apos;ROOM_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const ROOM_REMOVED = &apos;ROOM_REMOVED&apos;;
+/**
+* @ignore
+*/
+export const INVITE_ADDED = &apos;INVITE_ADDED&apos;;
+/**
+* @ignore
+*/
+export const INVITE_CHANGED = &apos;INVITE_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const MESSAGE_ADDED = &apos;MESSAGE_ADDED&apos;;
+/**
+* @ignore
+*/
+export const MESSAGE_CHANGED = &apos;MESSAGE_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const MESSAGE_REMOVED = &apos;MESSAGE_REMOVED&apos;;
+/**
+* @ignore
+*/
+export const PARTICIPANT_ADDED = &apos;PARTICIPANT_ADDED&apos;;
+/**
+* @ignore
+*/
+export const PARTICIPANT_CHANGED = &apos;PARTICIPANT_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const PARTICIPANT_REMOVED = &apos;PARTICIPANT_REMOVED&apos;;
+/**
+* @ignore
+*/
+export const STREAM_PUBLISHED = &apos;STREAM_PUBLISHED&apos;;
+/**
+* @ignore
+*/
+export const STREAM_CHANGED = &apos;STREAM_CHANGED&apos;;
+/**
+* @ignore
+*/
+export const STREAM_UNPUBLISHED = &apos;STREAM_UNPUBLISHED&apos;;
+
+export default {
+	USER_ADDED, USER_CHANGED, USER_REMOVED,
+	ROOM_ADDED, ROOM_CHANGED, ROOM_REMOVED,
+	INVITE_ADDED, INVITE_CHANGED,
+	MESSAGE_ADDED, MESSAGE_CHANGED, MESSAGE_REMOVED,
+	PARTICIPANT_ADDED, PARTICIPANT_CHANGED, PARTICIPANT_REMOVED,
+	STREAM_PUBLISHED, STREAM_CHANGED, STREAM_UNPUBLISHED
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.5)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

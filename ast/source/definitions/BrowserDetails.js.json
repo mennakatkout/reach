@@ -1,0 +1,59 @@
+{
+  "type": "Program",
+  "body": [],
+  "sourceType": "module",
+  "range": [
+    336,
+    336
+  ],
+  "loc": {
+    "start": {
+      "line": 9,
+      "column": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 0
+    }
+  },
+  "leadingComments": [
+    {
+      "type": "Block",
+      "value": "*\n * The current browser's infos\n * @typedef {Object} BrowserDetails\n * @property {string} browser - current browser's name\n * @property {?number} version - current browser's version\n * @property {?number} minVersion - current browser's minimum supported version\n * @property {boolean} compatible - is current browser supported ?\n ",
+      "range": [
+        0,
+        335
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * The current browser's infos\n * @typedef {Object} BrowserDetails\n * @property {string} browser - current browser's name\n * @property {?number} version - current browser's version\n * @property {?number} minVersion - current browser's minimum supported version\n * @property {boolean} compatible - is current browser supported ?\n ",
+      "range": [
+        0,
+        335
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

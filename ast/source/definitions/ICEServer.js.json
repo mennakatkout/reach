@@ -1,0 +1,59 @@
+{
+  "type": "Program",
+  "body": [],
+  "sourceType": "module",
+  "range": [
+    310,
+    310
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 0
+    }
+  },
+  "leadingComments": [
+    {
+      "type": "Block",
+      "value": "*\n * TURN/STUN server configuration\n * @typedef {Object} ICEServer\n * @property {string} url - The server url. (*stun:<ip|hostname>:<port>* or *turn:<ip|hostname>:<port?>*)\n * @property {string} [username] - The user name for this server\n * @property {string} [credential] - The password for this server\n ",
+      "range": [
+        0,
+        309
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * TURN/STUN server configuration\n * @typedef {Object} ICEServer\n * @property {string} url - The server url. (*stun:<ip|hostname>:<port>* or *turn:<ip|hostname>:<port?>*)\n * @property {string} [username] - The user name for this server\n * @property {string} [credential] - The password for this server\n ",
+      "range": [
+        0,
+        309
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

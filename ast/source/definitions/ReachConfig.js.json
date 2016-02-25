@@ -1,0 +1,349 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ObjectExpression",
+        "properties": [
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "autoRequestMedia",
+              "range": [
+                721,
+                737
+              ],
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 1
+                },
+                "end": {
+                  "line": 11,
+                  "column": 17
+                }
+              }
+            },
+            "value": {
+              "type": "Literal",
+              "value": true,
+              "raw": "true",
+              "range": [
+                739,
+                743
+              ],
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 19
+                },
+                "end": {
+                  "line": 11,
+                  "column": 23
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": false,
+            "computed": false,
+            "range": [
+              721,
+              743
+            ],
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 1
+              },
+              "end": {
+                "line": 11,
+                "column": 23
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "localStreamElement",
+              "range": [
+                746,
+                764
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 1
+                },
+                "end": {
+                  "line": 12,
+                  "column": 19
+                }
+              }
+            },
+            "value": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "range": [
+                766,
+                770
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 21
+                },
+                "end": {
+                  "line": 12,
+                  "column": 25
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": false,
+            "computed": false,
+            "range": [
+              746,
+              770
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 1
+              },
+              "end": {
+                "line": 12,
+                "column": 25
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "remoteStreamElement",
+              "range": [
+                773,
+                792
+              ],
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 1
+                },
+                "end": {
+                  "line": 13,
+                  "column": 20
+                }
+              }
+            },
+            "value": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "range": [
+                794,
+                798
+              ],
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 22
+                },
+                "end": {
+                  "line": 13,
+                  "column": 26
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": false,
+            "computed": false,
+            "range": [
+              773,
+              798
+            ],
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 1
+              },
+              "end": {
+                "line": 13,
+                "column": 26
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "constraints",
+              "range": [
+                801,
+                812
+              ],
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 1
+                },
+                "end": {
+                  "line": 14,
+                  "column": 12
+                }
+              }
+            },
+            "value": {
+              "type": "Literal",
+              "value": null,
+              "raw": "null",
+              "range": [
+                814,
+                818
+              ],
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 14
+                },
+                "end": {
+                  "line": 14,
+                  "column": 18
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": false,
+            "computed": false,
+            "range": [
+              801,
+              818
+            ],
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 1
+              },
+              "end": {
+                "line": 14,
+                "column": 18
+              }
+            }
+          }
+        ],
+        "range": [
+          718,
+          820
+        ],
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 15
+          },
+          "end": {
+            "line": 15,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Reach config object\n * @typedef {Object} ReachConfig\n * @property {string|Element} [localStreamElement] - The id/element dom element that will hold the local video/audio stream\n * @property {string|Element} [remoteStreamElement] - The id/element dom element that will hold the remote video/audio stream\n * @property {boolean} [autoRequestMedia=true] - Immediately ask for camera access\n * @property {MediaConstraints} [mediaConstraints] - The default media constraints. These can be overriden when subscribing to a stream.\n * @property {ICEServer[]} [iceServers] - List of TURN/STUN servers to use for ICE. This list will be merged with the ICE servers declared in the namespace (**_/ice**).\n ",
+            "range": [
+              0,
+              702
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        703,
+        821
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Reach config object\n * @typedef {Object} ReachConfig\n * @property {string|Element} [localStreamElement] - The id/element dom element that will hold the local video/audio stream\n * @property {string|Element} [remoteStreamElement] - The id/element dom element that will hold the remote video/audio stream\n * @property {boolean} [autoRequestMedia=true] - Immediately ask for camera access\n * @property {MediaConstraints} [mediaConstraints] - The default media constraints. These can be overriden when subscribing to a stream.\n * @property {ICEServer[]} [iceServers] - List of TURN/STUN servers to use for ICE. This list will be merged with the ICE servers declared in the namespace (**_/ice**).\n ",
+          "range": [
+            0,
+            702
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 9,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    703,
+    821
+  ],
+  "loc": {
+    "start": {
+      "line": 10,
+      "column": 0
+    },
+    "end": {
+      "line": 15,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Reach config object\n * @typedef {Object} ReachConfig\n * @property {string|Element} [localStreamElement] - The id/element dom element that will hold the local video/audio stream\n * @property {string|Element} [remoteStreamElement] - The id/element dom element that will hold the remote video/audio stream\n * @property {boolean} [autoRequestMedia=true] - Immediately ask for camera access\n * @property {MediaConstraints} [mediaConstraints] - The default media constraints. These can be overriden when subscribing to a stream.\n * @property {ICEServer[]} [iceServers] - List of TURN/STUN servers to use for ICE. This list will be merged with the ICE servers declared in the namespace (**_/ice**).\n ",
+      "range": [
+        0,
+        702
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

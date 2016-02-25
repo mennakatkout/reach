@@ -1,0 +1,4291 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "USER_ADDED",
+              "range": [
+                1047,
+                1057
+              ],
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 13
+                },
+                "end": {
+                  "line": 25,
+                  "column": 23
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "USER_ADDED",
+              "raw": "'USER_ADDED'",
+              "range": [
+                1060,
+                1072
+              ],
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 26
+                },
+                "end": {
+                  "line": 25,
+                  "column": 38
+                }
+              }
+            },
+            "range": [
+              1047,
+              1072
+            ],
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 13
+              },
+              "end": {
+                "line": 25,
+                "column": 38
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1041,
+          1073
+        ],
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 7
+          },
+          "end": {
+            "line": 25,
+            "column": 39
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * The supported events by Reach#on, Room#on, Stream#on...\n * @typedef {Object} Events\n * @property {string} USER_ADDED='USER_ADDED'\n * @property {string} USER_CHANGED='USER_CHANGED'\n * @property {string} USER_REMOVED='USER_REMOVED'\n * @property {string} ROOM_ADDED='ROOM_ADDED'\n * @property {string} ROOM_CHANGED='ROOM_CHANGED'\n * @property {string} ROOM_REMOVED='ROOM_REMOVED'\n * @property {string} INVITE_ADDED='INVITE_ADDED'\n * @property {string} INVITE_CHANGED='INVITE_CHANGED'\n * @property {string} PARTICIPANT_ADDED='PARTICIPANT_ADDED'\n * @property {string} PARTICIPANT_CHANGED='PARTICIPANT_CHANGED'\n * @property {string} PARTICIPANT_REMOVED='PARTICIPANT_REMOVED'\n * @property {string} MESSAGE_ADDED='MESSAGE_ADDED'\n * @property {string} MESSAGE_CHANGED='MESSAGE_CHANGED'\n * @property {string} MESSAGE_REMOVED='MESSAGE_REMOVED'\n * @property {string} STREAM_PUBLISHED='STREAM_PUBLISHED'\n * @property {string} STREAM_CHANGED='STREAM_CHANGED'\n * @property {string} STREAM_UNPUBLISHED='STREAM_UNPUBLISHED'\n ",
+            "range": [
+              0,
+              1016
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 21,
+                "column": 3
+              }
+            }
+          },
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1017,
+              1033
+            ],
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 0
+              },
+              "end": {
+                "line": 24,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1074,
+              1090
+            ],
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 0
+              },
+              "end": {
+                "line": 28,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1034,
+        1073
+      ],
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 39
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * The supported events by Reach#on, Room#on, Stream#on...\n * @typedef {Object} Events\n * @property {string} USER_ADDED='USER_ADDED'\n * @property {string} USER_CHANGED='USER_CHANGED'\n * @property {string} USER_REMOVED='USER_REMOVED'\n * @property {string} ROOM_ADDED='ROOM_ADDED'\n * @property {string} ROOM_CHANGED='ROOM_CHANGED'\n * @property {string} ROOM_REMOVED='ROOM_REMOVED'\n * @property {string} INVITE_ADDED='INVITE_ADDED'\n * @property {string} INVITE_CHANGED='INVITE_CHANGED'\n * @property {string} PARTICIPANT_ADDED='PARTICIPANT_ADDED'\n * @property {string} PARTICIPANT_CHANGED='PARTICIPANT_CHANGED'\n * @property {string} PARTICIPANT_REMOVED='PARTICIPANT_REMOVED'\n * @property {string} MESSAGE_ADDED='MESSAGE_ADDED'\n * @property {string} MESSAGE_CHANGED='MESSAGE_CHANGED'\n * @property {string} MESSAGE_REMOVED='MESSAGE_REMOVED'\n * @property {string} STREAM_PUBLISHED='STREAM_PUBLISHED'\n * @property {string} STREAM_CHANGED='STREAM_CHANGED'\n * @property {string} STREAM_UNPUBLISHED='STREAM_UNPUBLISHED'\n ",
+          "range": [
+            0,
+            1016
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 21,
+              "column": 3
+            }
+          }
+        },
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1017,
+            1033
+          ],
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 0
+            },
+            "end": {
+              "line": 24,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1074,
+            1090
+          ],
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 0
+            },
+            "end": {
+              "line": 28,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "USER_CHANGED",
+              "range": [
+                1104,
+                1116
+              ],
+              "loc": {
+                "start": {
+                  "line": 29,
+                  "column": 13
+                },
+                "end": {
+                  "line": 29,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "USER_CHANGED",
+              "raw": "'USER_CHANGED'",
+              "range": [
+                1119,
+                1133
+              ],
+              "loc": {
+                "start": {
+                  "line": 29,
+                  "column": 28
+                },
+                "end": {
+                  "line": 29,
+                  "column": 42
+                }
+              }
+            },
+            "range": [
+              1104,
+              1133
+            ],
+            "loc": {
+              "start": {
+                "line": 29,
+                "column": 13
+              },
+              "end": {
+                "line": 29,
+                "column": 42
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1098,
+          1134
+        ],
+        "loc": {
+          "start": {
+            "line": 29,
+            "column": 7
+          },
+          "end": {
+            "line": 29,
+            "column": 43
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1074,
+              1090
+            ],
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 0
+              },
+              "end": {
+                "line": 28,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1135,
+              1151
+            ],
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1091,
+        1134
+      ],
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 29,
+          "column": 43
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1074,
+            1090
+          ],
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 0
+            },
+            "end": {
+              "line": 28,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1135,
+            1151
+          ],
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 0
+            },
+            "end": {
+              "line": 32,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "USER_REMOVED",
+              "range": [
+                1165,
+                1177
+              ],
+              "loc": {
+                "start": {
+                  "line": 33,
+                  "column": 13
+                },
+                "end": {
+                  "line": 33,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "USER_REMOVED",
+              "raw": "'USER_REMOVED'",
+              "range": [
+                1180,
+                1194
+              ],
+              "loc": {
+                "start": {
+                  "line": 33,
+                  "column": 28
+                },
+                "end": {
+                  "line": 33,
+                  "column": 42
+                }
+              }
+            },
+            "range": [
+              1165,
+              1194
+            ],
+            "loc": {
+              "start": {
+                "line": 33,
+                "column": 13
+              },
+              "end": {
+                "line": 33,
+                "column": 42
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1159,
+          1195
+        ],
+        "loc": {
+          "start": {
+            "line": 33,
+            "column": 7
+          },
+          "end": {
+            "line": 33,
+            "column": 43
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1135,
+              1151
+            ],
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1196,
+              1212
+            ],
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 0
+              },
+              "end": {
+                "line": 36,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1152,
+        1195
+      ],
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 43
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1135,
+            1151
+          ],
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 0
+            },
+            "end": {
+              "line": 32,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1196,
+            1212
+          ],
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 0
+            },
+            "end": {
+              "line": 36,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "ROOM_ADDED",
+              "range": [
+                1226,
+                1236
+              ],
+              "loc": {
+                "start": {
+                  "line": 37,
+                  "column": 13
+                },
+                "end": {
+                  "line": 37,
+                  "column": 23
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "ROOM_ADDED",
+              "raw": "'ROOM_ADDED'",
+              "range": [
+                1239,
+                1251
+              ],
+              "loc": {
+                "start": {
+                  "line": 37,
+                  "column": 26
+                },
+                "end": {
+                  "line": 37,
+                  "column": 38
+                }
+              }
+            },
+            "range": [
+              1226,
+              1251
+            ],
+            "loc": {
+              "start": {
+                "line": 37,
+                "column": 13
+              },
+              "end": {
+                "line": 37,
+                "column": 38
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1220,
+          1252
+        ],
+        "loc": {
+          "start": {
+            "line": 37,
+            "column": 7
+          },
+          "end": {
+            "line": 37,
+            "column": 39
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1196,
+              1212
+            ],
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 0
+              },
+              "end": {
+                "line": 36,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1253,
+              1269
+            ],
+            "loc": {
+              "start": {
+                "line": 38,
+                "column": 0
+              },
+              "end": {
+                "line": 40,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1213,
+        1252
+      ],
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 39
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1196,
+            1212
+          ],
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 0
+            },
+            "end": {
+              "line": 36,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1253,
+            1269
+          ],
+          "loc": {
+            "start": {
+              "line": 38,
+              "column": 0
+            },
+            "end": {
+              "line": 40,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "ROOM_CHANGED",
+              "range": [
+                1283,
+                1295
+              ],
+              "loc": {
+                "start": {
+                  "line": 41,
+                  "column": 13
+                },
+                "end": {
+                  "line": 41,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "ROOM_CHANGED",
+              "raw": "'ROOM_CHANGED'",
+              "range": [
+                1298,
+                1312
+              ],
+              "loc": {
+                "start": {
+                  "line": 41,
+                  "column": 28
+                },
+                "end": {
+                  "line": 41,
+                  "column": 42
+                }
+              }
+            },
+            "range": [
+              1283,
+              1312
+            ],
+            "loc": {
+              "start": {
+                "line": 41,
+                "column": 13
+              },
+              "end": {
+                "line": 41,
+                "column": 42
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1277,
+          1313
+        ],
+        "loc": {
+          "start": {
+            "line": 41,
+            "column": 7
+          },
+          "end": {
+            "line": 41,
+            "column": 43
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1253,
+              1269
+            ],
+            "loc": {
+              "start": {
+                "line": 38,
+                "column": 0
+              },
+              "end": {
+                "line": 40,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1314,
+              1330
+            ],
+            "loc": {
+              "start": {
+                "line": 42,
+                "column": 0
+              },
+              "end": {
+                "line": 44,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1270,
+        1313
+      ],
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 0
+        },
+        "end": {
+          "line": 41,
+          "column": 43
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1253,
+            1269
+          ],
+          "loc": {
+            "start": {
+              "line": 38,
+              "column": 0
+            },
+            "end": {
+              "line": 40,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1314,
+            1330
+          ],
+          "loc": {
+            "start": {
+              "line": 42,
+              "column": 0
+            },
+            "end": {
+              "line": 44,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "ROOM_REMOVED",
+              "range": [
+                1344,
+                1356
+              ],
+              "loc": {
+                "start": {
+                  "line": 45,
+                  "column": 13
+                },
+                "end": {
+                  "line": 45,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "ROOM_REMOVED",
+              "raw": "'ROOM_REMOVED'",
+              "range": [
+                1359,
+                1373
+              ],
+              "loc": {
+                "start": {
+                  "line": 45,
+                  "column": 28
+                },
+                "end": {
+                  "line": 45,
+                  "column": 42
+                }
+              }
+            },
+            "range": [
+              1344,
+              1373
+            ],
+            "loc": {
+              "start": {
+                "line": 45,
+                "column": 13
+              },
+              "end": {
+                "line": 45,
+                "column": 42
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1338,
+          1374
+        ],
+        "loc": {
+          "start": {
+            "line": 45,
+            "column": 7
+          },
+          "end": {
+            "line": 45,
+            "column": 43
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1314,
+              1330
+            ],
+            "loc": {
+              "start": {
+                "line": 42,
+                "column": 0
+              },
+              "end": {
+                "line": 44,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1375,
+              1391
+            ],
+            "loc": {
+              "start": {
+                "line": 46,
+                "column": 0
+              },
+              "end": {
+                "line": 48,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1331,
+        1374
+      ],
+      "loc": {
+        "start": {
+          "line": 45,
+          "column": 0
+        },
+        "end": {
+          "line": 45,
+          "column": 43
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1314,
+            1330
+          ],
+          "loc": {
+            "start": {
+              "line": 42,
+              "column": 0
+            },
+            "end": {
+              "line": 44,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1375,
+            1391
+          ],
+          "loc": {
+            "start": {
+              "line": 46,
+              "column": 0
+            },
+            "end": {
+              "line": 48,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "INVITE_ADDED",
+              "range": [
+                1405,
+                1417
+              ],
+              "loc": {
+                "start": {
+                  "line": 49,
+                  "column": 13
+                },
+                "end": {
+                  "line": 49,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "INVITE_ADDED",
+              "raw": "'INVITE_ADDED'",
+              "range": [
+                1420,
+                1434
+              ],
+              "loc": {
+                "start": {
+                  "line": 49,
+                  "column": 28
+                },
+                "end": {
+                  "line": 49,
+                  "column": 42
+                }
+              }
+            },
+            "range": [
+              1405,
+              1434
+            ],
+            "loc": {
+              "start": {
+                "line": 49,
+                "column": 13
+              },
+              "end": {
+                "line": 49,
+                "column": 42
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1399,
+          1435
+        ],
+        "loc": {
+          "start": {
+            "line": 49,
+            "column": 7
+          },
+          "end": {
+            "line": 49,
+            "column": 43
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1375,
+              1391
+            ],
+            "loc": {
+              "start": {
+                "line": 46,
+                "column": 0
+              },
+              "end": {
+                "line": 48,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1436,
+              1452
+            ],
+            "loc": {
+              "start": {
+                "line": 50,
+                "column": 0
+              },
+              "end": {
+                "line": 52,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1392,
+        1435
+      ],
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 0
+        },
+        "end": {
+          "line": 49,
+          "column": 43
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1375,
+            1391
+          ],
+          "loc": {
+            "start": {
+              "line": 46,
+              "column": 0
+            },
+            "end": {
+              "line": 48,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1436,
+            1452
+          ],
+          "loc": {
+            "start": {
+              "line": 50,
+              "column": 0
+            },
+            "end": {
+              "line": 52,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "INVITE_CHANGED",
+              "range": [
+                1466,
+                1480
+              ],
+              "loc": {
+                "start": {
+                  "line": 53,
+                  "column": 13
+                },
+                "end": {
+                  "line": 53,
+                  "column": 27
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "INVITE_CHANGED",
+              "raw": "'INVITE_CHANGED'",
+              "range": [
+                1483,
+                1499
+              ],
+              "loc": {
+                "start": {
+                  "line": 53,
+                  "column": 30
+                },
+                "end": {
+                  "line": 53,
+                  "column": 46
+                }
+              }
+            },
+            "range": [
+              1466,
+              1499
+            ],
+            "loc": {
+              "start": {
+                "line": 53,
+                "column": 13
+              },
+              "end": {
+                "line": 53,
+                "column": 46
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1460,
+          1500
+        ],
+        "loc": {
+          "start": {
+            "line": 53,
+            "column": 7
+          },
+          "end": {
+            "line": 53,
+            "column": 47
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1436,
+              1452
+            ],
+            "loc": {
+              "start": {
+                "line": 50,
+                "column": 0
+              },
+              "end": {
+                "line": 52,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1501,
+              1517
+            ],
+            "loc": {
+              "start": {
+                "line": 54,
+                "column": 0
+              },
+              "end": {
+                "line": 56,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1453,
+        1500
+      ],
+      "loc": {
+        "start": {
+          "line": 53,
+          "column": 0
+        },
+        "end": {
+          "line": 53,
+          "column": 47
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1436,
+            1452
+          ],
+          "loc": {
+            "start": {
+              "line": 50,
+              "column": 0
+            },
+            "end": {
+              "line": 52,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1501,
+            1517
+          ],
+          "loc": {
+            "start": {
+              "line": 54,
+              "column": 0
+            },
+            "end": {
+              "line": 56,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "MESSAGE_ADDED",
+              "range": [
+                1531,
+                1544
+              ],
+              "loc": {
+                "start": {
+                  "line": 57,
+                  "column": 13
+                },
+                "end": {
+                  "line": 57,
+                  "column": 26
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "MESSAGE_ADDED",
+              "raw": "'MESSAGE_ADDED'",
+              "range": [
+                1547,
+                1562
+              ],
+              "loc": {
+                "start": {
+                  "line": 57,
+                  "column": 29
+                },
+                "end": {
+                  "line": 57,
+                  "column": 44
+                }
+              }
+            },
+            "range": [
+              1531,
+              1562
+            ],
+            "loc": {
+              "start": {
+                "line": 57,
+                "column": 13
+              },
+              "end": {
+                "line": 57,
+                "column": 44
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1525,
+          1563
+        ],
+        "loc": {
+          "start": {
+            "line": 57,
+            "column": 7
+          },
+          "end": {
+            "line": 57,
+            "column": 45
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1501,
+              1517
+            ],
+            "loc": {
+              "start": {
+                "line": 54,
+                "column": 0
+              },
+              "end": {
+                "line": 56,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1564,
+              1580
+            ],
+            "loc": {
+              "start": {
+                "line": 58,
+                "column": 0
+              },
+              "end": {
+                "line": 60,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1518,
+        1563
+      ],
+      "loc": {
+        "start": {
+          "line": 57,
+          "column": 0
+        },
+        "end": {
+          "line": 57,
+          "column": 45
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1501,
+            1517
+          ],
+          "loc": {
+            "start": {
+              "line": 54,
+              "column": 0
+            },
+            "end": {
+              "line": 56,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1564,
+            1580
+          ],
+          "loc": {
+            "start": {
+              "line": 58,
+              "column": 0
+            },
+            "end": {
+              "line": 60,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "MESSAGE_CHANGED",
+              "range": [
+                1594,
+                1609
+              ],
+              "loc": {
+                "start": {
+                  "line": 61,
+                  "column": 13
+                },
+                "end": {
+                  "line": 61,
+                  "column": 28
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "MESSAGE_CHANGED",
+              "raw": "'MESSAGE_CHANGED'",
+              "range": [
+                1612,
+                1629
+              ],
+              "loc": {
+                "start": {
+                  "line": 61,
+                  "column": 31
+                },
+                "end": {
+                  "line": 61,
+                  "column": 48
+                }
+              }
+            },
+            "range": [
+              1594,
+              1629
+            ],
+            "loc": {
+              "start": {
+                "line": 61,
+                "column": 13
+              },
+              "end": {
+                "line": 61,
+                "column": 48
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1588,
+          1630
+        ],
+        "loc": {
+          "start": {
+            "line": 61,
+            "column": 7
+          },
+          "end": {
+            "line": 61,
+            "column": 49
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1564,
+              1580
+            ],
+            "loc": {
+              "start": {
+                "line": 58,
+                "column": 0
+              },
+              "end": {
+                "line": 60,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1631,
+              1647
+            ],
+            "loc": {
+              "start": {
+                "line": 62,
+                "column": 0
+              },
+              "end": {
+                "line": 64,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1581,
+        1630
+      ],
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 0
+        },
+        "end": {
+          "line": 61,
+          "column": 49
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1564,
+            1580
+          ],
+          "loc": {
+            "start": {
+              "line": 58,
+              "column": 0
+            },
+            "end": {
+              "line": 60,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1631,
+            1647
+          ],
+          "loc": {
+            "start": {
+              "line": 62,
+              "column": 0
+            },
+            "end": {
+              "line": 64,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "MESSAGE_REMOVED",
+              "range": [
+                1661,
+                1676
+              ],
+              "loc": {
+                "start": {
+                  "line": 65,
+                  "column": 13
+                },
+                "end": {
+                  "line": 65,
+                  "column": 28
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "MESSAGE_REMOVED",
+              "raw": "'MESSAGE_REMOVED'",
+              "range": [
+                1679,
+                1696
+              ],
+              "loc": {
+                "start": {
+                  "line": 65,
+                  "column": 31
+                },
+                "end": {
+                  "line": 65,
+                  "column": 48
+                }
+              }
+            },
+            "range": [
+              1661,
+              1696
+            ],
+            "loc": {
+              "start": {
+                "line": 65,
+                "column": 13
+              },
+              "end": {
+                "line": 65,
+                "column": 48
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1655,
+          1697
+        ],
+        "loc": {
+          "start": {
+            "line": 65,
+            "column": 7
+          },
+          "end": {
+            "line": 65,
+            "column": 49
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1631,
+              1647
+            ],
+            "loc": {
+              "start": {
+                "line": 62,
+                "column": 0
+              },
+              "end": {
+                "line": 64,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1698,
+              1714
+            ],
+            "loc": {
+              "start": {
+                "line": 66,
+                "column": 0
+              },
+              "end": {
+                "line": 68,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1648,
+        1697
+      ],
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 0
+        },
+        "end": {
+          "line": 65,
+          "column": 49
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1631,
+            1647
+          ],
+          "loc": {
+            "start": {
+              "line": 62,
+              "column": 0
+            },
+            "end": {
+              "line": 64,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1698,
+            1714
+          ],
+          "loc": {
+            "start": {
+              "line": 66,
+              "column": 0
+            },
+            "end": {
+              "line": 68,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_ADDED",
+              "range": [
+                1728,
+                1745
+              ],
+              "loc": {
+                "start": {
+                  "line": 69,
+                  "column": 13
+                },
+                "end": {
+                  "line": 69,
+                  "column": 30
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "PARTICIPANT_ADDED",
+              "raw": "'PARTICIPANT_ADDED'",
+              "range": [
+                1748,
+                1767
+              ],
+              "loc": {
+                "start": {
+                  "line": 69,
+                  "column": 33
+                },
+                "end": {
+                  "line": 69,
+                  "column": 52
+                }
+              }
+            },
+            "range": [
+              1728,
+              1767
+            ],
+            "loc": {
+              "start": {
+                "line": 69,
+                "column": 13
+              },
+              "end": {
+                "line": 69,
+                "column": 52
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1722,
+          1768
+        ],
+        "loc": {
+          "start": {
+            "line": 69,
+            "column": 7
+          },
+          "end": {
+            "line": 69,
+            "column": 53
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1698,
+              1714
+            ],
+            "loc": {
+              "start": {
+                "line": 66,
+                "column": 0
+              },
+              "end": {
+                "line": 68,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1769,
+              1785
+            ],
+            "loc": {
+              "start": {
+                "line": 70,
+                "column": 0
+              },
+              "end": {
+                "line": 72,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1715,
+        1768
+      ],
+      "loc": {
+        "start": {
+          "line": 69,
+          "column": 0
+        },
+        "end": {
+          "line": 69,
+          "column": 53
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1698,
+            1714
+          ],
+          "loc": {
+            "start": {
+              "line": 66,
+              "column": 0
+            },
+            "end": {
+              "line": 68,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1769,
+            1785
+          ],
+          "loc": {
+            "start": {
+              "line": 70,
+              "column": 0
+            },
+            "end": {
+              "line": 72,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_CHANGED",
+              "range": [
+                1799,
+                1818
+              ],
+              "loc": {
+                "start": {
+                  "line": 73,
+                  "column": 13
+                },
+                "end": {
+                  "line": 73,
+                  "column": 32
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "PARTICIPANT_CHANGED",
+              "raw": "'PARTICIPANT_CHANGED'",
+              "range": [
+                1821,
+                1842
+              ],
+              "loc": {
+                "start": {
+                  "line": 73,
+                  "column": 35
+                },
+                "end": {
+                  "line": 73,
+                  "column": 56
+                }
+              }
+            },
+            "range": [
+              1799,
+              1842
+            ],
+            "loc": {
+              "start": {
+                "line": 73,
+                "column": 13
+              },
+              "end": {
+                "line": 73,
+                "column": 56
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1793,
+          1843
+        ],
+        "loc": {
+          "start": {
+            "line": 73,
+            "column": 7
+          },
+          "end": {
+            "line": 73,
+            "column": 57
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1769,
+              1785
+            ],
+            "loc": {
+              "start": {
+                "line": 70,
+                "column": 0
+              },
+              "end": {
+                "line": 72,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1844,
+              1860
+            ],
+            "loc": {
+              "start": {
+                "line": 74,
+                "column": 0
+              },
+              "end": {
+                "line": 76,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1786,
+        1843
+      ],
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 0
+        },
+        "end": {
+          "line": 73,
+          "column": 57
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1769,
+            1785
+          ],
+          "loc": {
+            "start": {
+              "line": 70,
+              "column": 0
+            },
+            "end": {
+              "line": 72,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1844,
+            1860
+          ],
+          "loc": {
+            "start": {
+              "line": 74,
+              "column": 0
+            },
+            "end": {
+              "line": 76,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_REMOVED",
+              "range": [
+                1874,
+                1893
+              ],
+              "loc": {
+                "start": {
+                  "line": 77,
+                  "column": 13
+                },
+                "end": {
+                  "line": 77,
+                  "column": 32
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "PARTICIPANT_REMOVED",
+              "raw": "'PARTICIPANT_REMOVED'",
+              "range": [
+                1896,
+                1917
+              ],
+              "loc": {
+                "start": {
+                  "line": 77,
+                  "column": 35
+                },
+                "end": {
+                  "line": 77,
+                  "column": 56
+                }
+              }
+            },
+            "range": [
+              1874,
+              1917
+            ],
+            "loc": {
+              "start": {
+                "line": 77,
+                "column": 13
+              },
+              "end": {
+                "line": 77,
+                "column": 56
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1868,
+          1918
+        ],
+        "loc": {
+          "start": {
+            "line": 77,
+            "column": 7
+          },
+          "end": {
+            "line": 77,
+            "column": 57
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1844,
+              1860
+            ],
+            "loc": {
+              "start": {
+                "line": 74,
+                "column": 0
+              },
+              "end": {
+                "line": 76,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1919,
+              1935
+            ],
+            "loc": {
+              "start": {
+                "line": 78,
+                "column": 0
+              },
+              "end": {
+                "line": 80,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1861,
+        1918
+      ],
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 0
+        },
+        "end": {
+          "line": 77,
+          "column": 57
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1844,
+            1860
+          ],
+          "loc": {
+            "start": {
+              "line": 74,
+              "column": 0
+            },
+            "end": {
+              "line": 76,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1919,
+            1935
+          ],
+          "loc": {
+            "start": {
+              "line": 78,
+              "column": 0
+            },
+            "end": {
+              "line": 80,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "STREAM_PUBLISHED",
+              "range": [
+                1949,
+                1965
+              ],
+              "loc": {
+                "start": {
+                  "line": 81,
+                  "column": 13
+                },
+                "end": {
+                  "line": 81,
+                  "column": 29
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "STREAM_PUBLISHED",
+              "raw": "'STREAM_PUBLISHED'",
+              "range": [
+                1968,
+                1986
+              ],
+              "loc": {
+                "start": {
+                  "line": 81,
+                  "column": 32
+                },
+                "end": {
+                  "line": 81,
+                  "column": 50
+                }
+              }
+            },
+            "range": [
+              1949,
+              1986
+            ],
+            "loc": {
+              "start": {
+                "line": 81,
+                "column": 13
+              },
+              "end": {
+                "line": 81,
+                "column": 50
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          1943,
+          1987
+        ],
+        "loc": {
+          "start": {
+            "line": 81,
+            "column": 7
+          },
+          "end": {
+            "line": 81,
+            "column": 51
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1919,
+              1935
+            ],
+            "loc": {
+              "start": {
+                "line": 78,
+                "column": 0
+              },
+              "end": {
+                "line": 80,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1988,
+              2004
+            ],
+            "loc": {
+              "start": {
+                "line": 82,
+                "column": 0
+              },
+              "end": {
+                "line": 84,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        1936,
+        1987
+      ],
+      "loc": {
+        "start": {
+          "line": 81,
+          "column": 0
+        },
+        "end": {
+          "line": 81,
+          "column": 51
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1919,
+            1935
+          ],
+          "loc": {
+            "start": {
+              "line": 78,
+              "column": 0
+            },
+            "end": {
+              "line": 80,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1988,
+            2004
+          ],
+          "loc": {
+            "start": {
+              "line": 82,
+              "column": 0
+            },
+            "end": {
+              "line": 84,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "STREAM_CHANGED",
+              "range": [
+                2018,
+                2032
+              ],
+              "loc": {
+                "start": {
+                  "line": 85,
+                  "column": 13
+                },
+                "end": {
+                  "line": 85,
+                  "column": 27
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "STREAM_CHANGED",
+              "raw": "'STREAM_CHANGED'",
+              "range": [
+                2035,
+                2051
+              ],
+              "loc": {
+                "start": {
+                  "line": 85,
+                  "column": 30
+                },
+                "end": {
+                  "line": 85,
+                  "column": 46
+                }
+              }
+            },
+            "range": [
+              2018,
+              2051
+            ],
+            "loc": {
+              "start": {
+                "line": 85,
+                "column": 13
+              },
+              "end": {
+                "line": 85,
+                "column": 46
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          2012,
+          2052
+        ],
+        "loc": {
+          "start": {
+            "line": 85,
+            "column": 7
+          },
+          "end": {
+            "line": 85,
+            "column": 47
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              1988,
+              2004
+            ],
+            "loc": {
+              "start": {
+                "line": 82,
+                "column": 0
+              },
+              "end": {
+                "line": 84,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              2053,
+              2069
+            ],
+            "loc": {
+              "start": {
+                "line": 86,
+                "column": 0
+              },
+              "end": {
+                "line": 88,
+                "column": 2
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        2005,
+        2052
+      ],
+      "loc": {
+        "start": {
+          "line": 85,
+          "column": 0
+        },
+        "end": {
+          "line": 85,
+          "column": 47
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            1988,
+            2004
+          ],
+          "loc": {
+            "start": {
+              "line": 82,
+              "column": 0
+            },
+            "end": {
+              "line": 84,
+              "column": 2
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            2053,
+            2069
+          ],
+          "loc": {
+            "start": {
+              "line": 86,
+              "column": 0
+            },
+            "end": {
+              "line": 88,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "STREAM_UNPUBLISHED",
+              "range": [
+                2083,
+                2101
+              ],
+              "loc": {
+                "start": {
+                  "line": 89,
+                  "column": 13
+                },
+                "end": {
+                  "line": 89,
+                  "column": 31
+                }
+              }
+            },
+            "init": {
+              "type": "Literal",
+              "value": "STREAM_UNPUBLISHED",
+              "raw": "'STREAM_UNPUBLISHED'",
+              "range": [
+                2104,
+                2124
+              ],
+              "loc": {
+                "start": {
+                  "line": 89,
+                  "column": 34
+                },
+                "end": {
+                  "line": 89,
+                  "column": 54
+                }
+              }
+            },
+            "range": [
+              2083,
+              2124
+            ],
+            "loc": {
+              "start": {
+                "line": 89,
+                "column": 13
+              },
+              "end": {
+                "line": 89,
+                "column": 54
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          2077,
+          2125
+        ],
+        "loc": {
+          "start": {
+            "line": 89,
+            "column": 7
+          },
+          "end": {
+            "line": 89,
+            "column": 55
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n* @ignore\n",
+            "range": [
+              2053,
+              2069
+            ],
+            "loc": {
+              "start": {
+                "line": 86,
+                "column": 0
+              },
+              "end": {
+                "line": 88,
+                "column": 2
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        2070,
+        2125
+      ],
+      "loc": {
+        "start": {
+          "line": 89,
+          "column": 0
+        },
+        "end": {
+          "line": 89,
+          "column": 55
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n* @ignore\n",
+          "range": [
+            2053,
+            2069
+          ],
+          "loc": {
+            "start": {
+              "line": 86,
+              "column": 0
+            },
+            "end": {
+              "line": 88,
+              "column": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ObjectExpression",
+        "properties": [
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "USER_ADDED",
+              "range": [
+                2145,
+                2155
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 1
+                },
+                "end": {
+                  "line": 92,
+                  "column": 11
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "USER_ADDED",
+              "range": [
+                2145,
+                2155
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 1
+                },
+                "end": {
+                  "line": 92,
+                  "column": 11
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2145,
+              2155
+            ],
+            "loc": {
+              "start": {
+                "line": 92,
+                "column": 1
+              },
+              "end": {
+                "line": 92,
+                "column": 11
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "USER_CHANGED",
+              "range": [
+                2157,
+                2169
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 13
+                },
+                "end": {
+                  "line": 92,
+                  "column": 25
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "USER_CHANGED",
+              "range": [
+                2157,
+                2169
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 13
+                },
+                "end": {
+                  "line": 92,
+                  "column": 25
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2157,
+              2169
+            ],
+            "loc": {
+              "start": {
+                "line": 92,
+                "column": 13
+              },
+              "end": {
+                "line": 92,
+                "column": 25
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "USER_REMOVED",
+              "range": [
+                2171,
+                2183
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 27
+                },
+                "end": {
+                  "line": 92,
+                  "column": 39
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "USER_REMOVED",
+              "range": [
+                2171,
+                2183
+              ],
+              "loc": {
+                "start": {
+                  "line": 92,
+                  "column": 27
+                },
+                "end": {
+                  "line": 92,
+                  "column": 39
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2171,
+              2183
+            ],
+            "loc": {
+              "start": {
+                "line": 92,
+                "column": 27
+              },
+              "end": {
+                "line": 92,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "ROOM_ADDED",
+              "range": [
+                2186,
+                2196
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 1
+                },
+                "end": {
+                  "line": 93,
+                  "column": 11
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "ROOM_ADDED",
+              "range": [
+                2186,
+                2196
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 1
+                },
+                "end": {
+                  "line": 93,
+                  "column": 11
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2186,
+              2196
+            ],
+            "loc": {
+              "start": {
+                "line": 93,
+                "column": 1
+              },
+              "end": {
+                "line": 93,
+                "column": 11
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "ROOM_CHANGED",
+              "range": [
+                2198,
+                2210
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 13
+                },
+                "end": {
+                  "line": 93,
+                  "column": 25
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "ROOM_CHANGED",
+              "range": [
+                2198,
+                2210
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 13
+                },
+                "end": {
+                  "line": 93,
+                  "column": 25
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2198,
+              2210
+            ],
+            "loc": {
+              "start": {
+                "line": 93,
+                "column": 13
+              },
+              "end": {
+                "line": 93,
+                "column": 25
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "ROOM_REMOVED",
+              "range": [
+                2212,
+                2224
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 27
+                },
+                "end": {
+                  "line": 93,
+                  "column": 39
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "ROOM_REMOVED",
+              "range": [
+                2212,
+                2224
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 27
+                },
+                "end": {
+                  "line": 93,
+                  "column": 39
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2212,
+              2224
+            ],
+            "loc": {
+              "start": {
+                "line": 93,
+                "column": 27
+              },
+              "end": {
+                "line": 93,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "INVITE_ADDED",
+              "range": [
+                2227,
+                2239
+              ],
+              "loc": {
+                "start": {
+                  "line": 94,
+                  "column": 1
+                },
+                "end": {
+                  "line": 94,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "INVITE_ADDED",
+              "range": [
+                2227,
+                2239
+              ],
+              "loc": {
+                "start": {
+                  "line": 94,
+                  "column": 1
+                },
+                "end": {
+                  "line": 94,
+                  "column": 13
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2227,
+              2239
+            ],
+            "loc": {
+              "start": {
+                "line": 94,
+                "column": 1
+              },
+              "end": {
+                "line": 94,
+                "column": 13
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "INVITE_CHANGED",
+              "range": [
+                2241,
+                2255
+              ],
+              "loc": {
+                "start": {
+                  "line": 94,
+                  "column": 15
+                },
+                "end": {
+                  "line": 94,
+                  "column": 29
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "INVITE_CHANGED",
+              "range": [
+                2241,
+                2255
+              ],
+              "loc": {
+                "start": {
+                  "line": 94,
+                  "column": 15
+                },
+                "end": {
+                  "line": 94,
+                  "column": 29
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2241,
+              2255
+            ],
+            "loc": {
+              "start": {
+                "line": 94,
+                "column": 15
+              },
+              "end": {
+                "line": 94,
+                "column": 29
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "MESSAGE_ADDED",
+              "range": [
+                2258,
+                2271
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 1
+                },
+                "end": {
+                  "line": 95,
+                  "column": 14
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "MESSAGE_ADDED",
+              "range": [
+                2258,
+                2271
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 1
+                },
+                "end": {
+                  "line": 95,
+                  "column": 14
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2258,
+              2271
+            ],
+            "loc": {
+              "start": {
+                "line": 95,
+                "column": 1
+              },
+              "end": {
+                "line": 95,
+                "column": 14
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "MESSAGE_CHANGED",
+              "range": [
+                2273,
+                2288
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 16
+                },
+                "end": {
+                  "line": 95,
+                  "column": 31
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "MESSAGE_CHANGED",
+              "range": [
+                2273,
+                2288
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 16
+                },
+                "end": {
+                  "line": 95,
+                  "column": 31
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2273,
+              2288
+            ],
+            "loc": {
+              "start": {
+                "line": 95,
+                "column": 16
+              },
+              "end": {
+                "line": 95,
+                "column": 31
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "MESSAGE_REMOVED",
+              "range": [
+                2290,
+                2305
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 33
+                },
+                "end": {
+                  "line": 95,
+                  "column": 48
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "MESSAGE_REMOVED",
+              "range": [
+                2290,
+                2305
+              ],
+              "loc": {
+                "start": {
+                  "line": 95,
+                  "column": 33
+                },
+                "end": {
+                  "line": 95,
+                  "column": 48
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2290,
+              2305
+            ],
+            "loc": {
+              "start": {
+                "line": 95,
+                "column": 33
+              },
+              "end": {
+                "line": 95,
+                "column": 48
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_ADDED",
+              "range": [
+                2308,
+                2325
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 1
+                },
+                "end": {
+                  "line": 96,
+                  "column": 18
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_ADDED",
+              "range": [
+                2308,
+                2325
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 1
+                },
+                "end": {
+                  "line": 96,
+                  "column": 18
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2308,
+              2325
+            ],
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 1
+              },
+              "end": {
+                "line": 96,
+                "column": 18
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_CHANGED",
+              "range": [
+                2327,
+                2346
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 20
+                },
+                "end": {
+                  "line": 96,
+                  "column": 39
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_CHANGED",
+              "range": [
+                2327,
+                2346
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 20
+                },
+                "end": {
+                  "line": 96,
+                  "column": 39
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2327,
+              2346
+            ],
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 20
+              },
+              "end": {
+                "line": 96,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_REMOVED",
+              "range": [
+                2348,
+                2367
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 41
+                },
+                "end": {
+                  "line": 96,
+                  "column": 60
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "PARTICIPANT_REMOVED",
+              "range": [
+                2348,
+                2367
+              ],
+              "loc": {
+                "start": {
+                  "line": 96,
+                  "column": 41
+                },
+                "end": {
+                  "line": 96,
+                  "column": 60
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2348,
+              2367
+            ],
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 41
+              },
+              "end": {
+                "line": 96,
+                "column": 60
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "STREAM_PUBLISHED",
+              "range": [
+                2370,
+                2386
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 1
+                },
+                "end": {
+                  "line": 97,
+                  "column": 17
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "STREAM_PUBLISHED",
+              "range": [
+                2370,
+                2386
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 1
+                },
+                "end": {
+                  "line": 97,
+                  "column": 17
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2370,
+              2386
+            ],
+            "loc": {
+              "start": {
+                "line": 97,
+                "column": 1
+              },
+              "end": {
+                "line": 97,
+                "column": 17
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "STREAM_CHANGED",
+              "range": [
+                2388,
+                2402
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 19
+                },
+                "end": {
+                  "line": 97,
+                  "column": 33
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "STREAM_CHANGED",
+              "range": [
+                2388,
+                2402
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 19
+                },
+                "end": {
+                  "line": 97,
+                  "column": 33
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2388,
+              2402
+            ],
+            "loc": {
+              "start": {
+                "line": 97,
+                "column": 19
+              },
+              "end": {
+                "line": 97,
+                "column": 33
+              }
+            }
+          },
+          {
+            "type": "Property",
+            "key": {
+              "type": "Identifier",
+              "name": "STREAM_UNPUBLISHED",
+              "range": [
+                2404,
+                2422
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 35
+                },
+                "end": {
+                  "line": 97,
+                  "column": 53
+                }
+              }
+            },
+            "value": {
+              "type": "Identifier",
+              "name": "STREAM_UNPUBLISHED",
+              "range": [
+                2404,
+                2422
+              ],
+              "loc": {
+                "start": {
+                  "line": 97,
+                  "column": 35
+                },
+                "end": {
+                  "line": 97,
+                  "column": 53
+                }
+              }
+            },
+            "kind": "init",
+            "method": false,
+            "shorthand": true,
+            "computed": false,
+            "range": [
+              2404,
+              2422
+            ],
+            "loc": {
+              "start": {
+                "line": 97,
+                "column": 35
+              },
+              "end": {
+                "line": 97,
+                "column": 53
+              }
+            }
+          }
+        ],
+        "range": [
+          2142,
+          2424
+        ],
+        "loc": {
+          "start": {
+            "line": 91,
+            "column": 15
+          },
+          "end": {
+            "line": 98,
+            "column": 1
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "range": [
+        2127,
+        2425
+      ],
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 0
+        },
+        "end": {
+          "line": 98,
+          "column": 2
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    1034,
+    2425
+  ],
+  "loc": {
+    "start": {
+      "line": 25,
+      "column": 0
+    },
+    "end": {
+      "line": 98,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * The supported events by Reach#on, Room#on, Stream#on...\n * @typedef {Object} Events\n * @property {string} USER_ADDED='USER_ADDED'\n * @property {string} USER_CHANGED='USER_CHANGED'\n * @property {string} USER_REMOVED='USER_REMOVED'\n * @property {string} ROOM_ADDED='ROOM_ADDED'\n * @property {string} ROOM_CHANGED='ROOM_CHANGED'\n * @property {string} ROOM_REMOVED='ROOM_REMOVED'\n * @property {string} INVITE_ADDED='INVITE_ADDED'\n * @property {string} INVITE_CHANGED='INVITE_CHANGED'\n * @property {string} PARTICIPANT_ADDED='PARTICIPANT_ADDED'\n * @property {string} PARTICIPANT_CHANGED='PARTICIPANT_CHANGED'\n * @property {string} PARTICIPANT_REMOVED='PARTICIPANT_REMOVED'\n * @property {string} MESSAGE_ADDED='MESSAGE_ADDED'\n * @property {string} MESSAGE_CHANGED='MESSAGE_CHANGED'\n * @property {string} MESSAGE_REMOVED='MESSAGE_REMOVED'\n * @property {string} STREAM_PUBLISHED='STREAM_PUBLISHED'\n * @property {string} STREAM_CHANGED='STREAM_CHANGED'\n * @property {string} STREAM_UNPUBLISHED='STREAM_UNPUBLISHED'\n ",
+      "range": [
+        0,
+        1016
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1017,
+        1033
+      ],
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1074,
+        1090
+      ],
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1135,
+        1151
+      ],
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 0
+        },
+        "end": {
+          "line": 32,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1196,
+        1212
+      ],
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 0
+        },
+        "end": {
+          "line": 36,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1253,
+        1269
+      ],
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 40,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1314,
+        1330
+      ],
+      "loc": {
+        "start": {
+          "line": 42,
+          "column": 0
+        },
+        "end": {
+          "line": 44,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1375,
+        1391
+      ],
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 0
+        },
+        "end": {
+          "line": 48,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1436,
+        1452
+      ],
+      "loc": {
+        "start": {
+          "line": 50,
+          "column": 0
+        },
+        "end": {
+          "line": 52,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1501,
+        1517
+      ],
+      "loc": {
+        "start": {
+          "line": 54,
+          "column": 0
+        },
+        "end": {
+          "line": 56,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1564,
+        1580
+      ],
+      "loc": {
+        "start": {
+          "line": 58,
+          "column": 0
+        },
+        "end": {
+          "line": 60,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1631,
+        1647
+      ],
+      "loc": {
+        "start": {
+          "line": 62,
+          "column": 0
+        },
+        "end": {
+          "line": 64,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1698,
+        1714
+      ],
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 0
+        },
+        "end": {
+          "line": 68,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1769,
+        1785
+      ],
+      "loc": {
+        "start": {
+          "line": 70,
+          "column": 0
+        },
+        "end": {
+          "line": 72,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1844,
+        1860
+      ],
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 0
+        },
+        "end": {
+          "line": 76,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1919,
+        1935
+      ],
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 0
+        },
+        "end": {
+          "line": 80,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        1988,
+        2004
+      ],
+      "loc": {
+        "start": {
+          "line": 82,
+          "column": 0
+        },
+        "end": {
+          "line": 84,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n* @ignore\n",
+      "range": [
+        2053,
+        2069
+      ],
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 0
+        },
+        "end": {
+          "line": 88,
+          "column": 2
+        }
+      }
+    }
+  ]
+}

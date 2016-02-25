@@ -1,0 +1,3583 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Reach.js",
+    "memberof": null,
+    "longname": "src/Reach.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {browser} from './adapter';\nimport Events from './definitions/Events';\nimport StreamTypes from './definitions/StreamTypes';\nimport ReachConfig from './definitions/ReachConfig';\n\n/**\n * Entry point for Reach SDK\n * @public\n */\nexport default class Reach {\n\t/**\n\t * Create Reach's data structure where the url points to (might not be the root of your namespace)\n\t * @public\n\t * @param {string|Webcom} [url=http://webcom.orange.com/base/reach] The url of your namespace or an existing Webcom reference.\n\t * @param {ReachConfig} [config] Reach configuration. You can pass constraints here\n\t */\n\tconstructor(url = 'http://webcom.orange.com/base/reach', config = null) {\n\t\t/**\n\t\t * The reference to the Reach data in your namespace\n\t\t * @private\n\t\t * @type {Webcom}\n\t\t */\n\t\tthis._ref = url instanceof Webcom ? url : new Webcom(url);\n\t\t/**\n\t\t * The configuration\n\t\t * @type {ReachConfig}\n\t\t */\n\t\tthis.config = Object.assign({}, ReachConfig, config);\n\t}\n\n\t/**\n\t * Get versions of SDK and DataModel.The Schema version can be used to determine compatibility with the Android & iOS SDK.\n\t * @return {{sdk: string, schema: string}}\n\t */\n\tstatic get v() {\n\t\treturn {sdk: SDK_VERSION, schema: SCHEMA_VERSION};\n\t}\n\n\t/**\n\t * The supported stream types\n\t * @returns {StreamTypes}\n\t */\n\tstatic get t() {\n\t\treturn StreamTypes;\n\t}\n\n\t/**\n\t * The supported events\n\t * @returns {Events}\n\t */\n\tstatic get e() {\n\t\treturn Events;\n\t}\n\n\t/**\n\t * The browser's details\n\t * @return {BrowserDetails}\n\t */\n\tstatic get browserDetails() {\n\t\treturn browser;\n\t}\n\n\t/**\n\t * Force current User's connected status\n\t * @type {string}\n\t */\n\tset status(status) {\n\t\t// Force User's status\n\t\treturn new Promise(status);\n\t}\n\n\t/**\n\t * Get current User's connected status\n\t * @type {string}\n\t */\n\tget status() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * Register a new user\n\t * @param {string} email The email of the user\n\t * @param {string} password The password of the user\n\t * @param {string} [name] The display name of the user (defaults to email)\n\t * @returns {Promise}\n\t */\n\tregister(email, password, name) {\n\t\t// Create user + login\n\t\treturn new Promise({email, password, name});\n\t}\n\n\t/**\n\t * Signin an existing user\n\t * @param {string} email The email of the user\n\t * @param {string} password The password of the user\n\t * @returns {Promise}\n\t */\n\tlogin(email, password) {\n\t\t// Update /users/{userId} & add current device in /_/devices/{userId}\n\t\treturn new Promise({email, password});\n\t}\n\n\t/**\n\t * Signin an anonymous user\n\t * @param {string} name The password of the user\n\t * @returns {Promise}\n\t */\n\tanonymous(name) {\n\t\treturn new Promise(name);\n\t}\n\n\t/**\n\t * Logout current user\n\t * @returns {Promise}\n\t */\n\tlogout() {\n\t\t// Update /users/{userId} & remove current device in /_/devices/{userId}\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Get the list of registered users\n\t * @return {Promise<User[], Error>}\n\t */\n\tusers() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Get the list of rooms\n\t * @return {Promise<Room[], Error>}\n\t */\n\trooms() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Register a callback for a specific event\n\t * @param {string} event The event name.\n\t * @param {function} callback The callback for the event\n\t */\n\ton(event, callback) {\n\t\tswitch (event) {\n\t\tcase Events.USER_ADDED:\n\t\t\tbreak;\n\t\tcase Events.USER_CHANGED:\n\t\t\tbreak;\n\t\tcase Events.USER_REMOVED:\n\t\t\tbreak;\n\t\tcase Events.ROOM_ADDED:\n\t\t\tbreak;\n\t\tcase Events.ROOM_CHANGED:\n\t\t\tbreak;\n\t\tcase Events.ROOM_REMOVED:\n\t\t\tbreak;\n\t\tcase Events.INVITE_ADDED:\n\t\t\tbreak;\n\t\tcase Events.INVITE_CHANGED:\n\t\t\tbreak;\n\t\t}\n\t\tcallback();\n\t}\n}\n\nmodule.exports = Reach;\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Reach",
+    "memberof": "src/Reach.js",
+    "longname": "src/Reach.js~Reach",
+    "access": "public",
+    "export": true,
+    "importPath": "webcom-reach/src/Reach.js",
+    "importStyle": "Reach",
+    "description": "Entry point for Reach SDK",
+    "lineNumber": 10,
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#constructor",
+    "access": "public",
+    "description": "Create Reach's data structure where the url points to (might not be the root of your namespace)",
+    "lineNumber": 17,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Webcom"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "http://webcom.orange.com/base/reach",
+        "defaultRaw": "http://webcom.orange.com/base/reach",
+        "name": "url",
+        "description": "The url of your namespace or an existing Webcom reference."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "ReachConfig"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "config",
+        "description": "Reach configuration. You can pass constraints here"
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 3,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "_ref",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#_ref",
+    "access": "private",
+    "description": "The reference to the Reach data in your namespace",
+    "lineNumber": 23,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Webcom"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "config",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#config",
+    "access": null,
+    "description": "The configuration",
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ReachConfig"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "get",
+    "static": true,
+    "variation": null,
+    "name": "v",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach.v",
+    "access": null,
+    "description": "Get versions of SDK and DataModel.The Schema version can be used to determine compatibility with the Android & iOS SDK.",
+    "lineNumber": 35,
+    "return": {
+      "nullable": null,
+      "types": [
+        "{sdk: string, schema: string}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 6,
+    "kind": "get",
+    "static": true,
+    "variation": null,
+    "name": "t",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach.t",
+    "access": null,
+    "description": "The supported stream types",
+    "lineNumber": 43,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{StreamTypes}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "StreamTypes"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 7,
+    "kind": "get",
+    "static": true,
+    "variation": null,
+    "name": "e",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach.e",
+    "access": null,
+    "description": "The supported events",
+    "lineNumber": 51,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Events}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Events"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 8,
+    "kind": "get",
+    "static": true,
+    "variation": null,
+    "name": "browserDetails",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach.browserDetails",
+    "access": null,
+    "description": "The browser's details",
+    "lineNumber": 59,
+    "return": {
+      "nullable": null,
+      "types": [
+        "BrowserDetails"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 9,
+    "kind": "set",
+    "static": false,
+    "variation": null,
+    "name": "status",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#status",
+    "access": null,
+    "description": "Force current User's connected status",
+    "lineNumber": 67,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 10,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "status",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#status",
+    "access": null,
+    "description": "Get current User's connected status",
+    "lineNumber": 76,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 11,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "register",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#register",
+    "access": null,
+    "description": "Register a new user",
+    "lineNumber": 87,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "email",
+        "description": "The email of the user"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "password",
+        "description": "The password of the user"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "name",
+        "description": "The display name of the user (defaults to email)"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 12,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "login",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#login",
+    "access": null,
+    "description": "Signin an existing user",
+    "lineNumber": 98,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "email",
+        "description": "The email of the user"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "password",
+        "description": "The password of the user"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 13,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "anonymous",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#anonymous",
+    "access": null,
+    "description": "Signin an anonymous user",
+    "lineNumber": 108,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "The password of the user"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 14,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "logout",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#logout",
+    "access": null,
+    "description": "Logout current user",
+    "lineNumber": 116,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 15,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "users",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#users",
+    "access": null,
+    "description": "Get the list of registered users",
+    "lineNumber": 125,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<User[], Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 16,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "rooms",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#rooms",
+    "access": null,
+    "description": "Get the list of rooms",
+    "lineNumber": 133,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Room[], Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 17,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "on",
+    "memberof": "src/Reach.js~Reach",
+    "longname": "src/Reach.js~Reach#on",
+    "access": null,
+    "description": "Register a callback for a specific event",
+    "lineNumber": 142,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "The event name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "The callback for the event"
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 18,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/adapter.js",
+    "memberof": null,
+    "longname": "src/adapter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 4,
+    "content": "// Use require instead of import to ensure disableLog is called before loading webrtc-adapter\n\n// Disable logging before importing WebRTC-Adapter\nrequire('webrtc-adapter/src/js/utils').disableLog(true);\n\n// Load WebRTC-Adapter\nconst adapter = require('webrtc-adapter');\n// Patch browserDetails waiting for webrtc-adapter@1.0.3 (v<=1.0.2 returns undefined when a browser doesn't match any condition)\nconst browserDetails = Object.assign(\n\t{browser: 'Unsupported browser', version: null, minVersion: null},\n\tadapter.browserDetails\n);\n\nconst version = `Reach v${SDK_VERSION} | Schema ${SCHEMA_VERSION} | Webcom v${Webcom.SDK_VERSION}`;\nconst defaultMessage = `${browserDetails.browser} - ${browserDetails.version || 'n/a'}`;\n\n// Check if the browser is supported\nlet message = defaultMessage;\nif(adapter.browserDetails.version === null) {\n\tmessage = 'Unsupported browser: browser must support WebRTC Peer-to-peer connections to use Reach';\n} else if (browserDetails.minVersion > browserDetails.version) {\n\tmessage = `Unsupported browser: browser is outdated, update to latest version (${browserDetails.minVersion}+)`;\n} else if(!adapter.browserShim){\n\tmessage = 'No shim for your browser. There might a problem with your package.';\n}\nbrowserDetails.compatible = defaultMessage === message;\n\n// Log browser status & SDKs versions on load\nlet args = [`${version} ${message}`];\nif(/^(chrome|firefox)$/.test(browserDetails.browser)) {\n\targs = [\n\t\t`%c ${version} %c ${message}`,\n\t\t`background: ${browserDetails.compatible ? '#f50' : 'red'}; color: #fff; font-weight: bold`,\n\t\t`color: ${browserDetails.compatible ? 'inherit' : 'red'}`\n\t];\n}\nconsole.log(...args);\n\n/**\n * Browser infos. Mixes adapter's browserDetails with compatible flag\n * @ignore\n * @type {BrowserDetails}\n */\nexport {browserDetails as browser};\n"
+  },
+  {
+    "__docId__": 19,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "adapter",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~adapter",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "browserDetails",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~browserDetails",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "version",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~version",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "defaultMessage",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~defaultMessage",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "message",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~message",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "args",
+    "memberof": "src/adapter.js",
+    "longname": "src/adapter.js~args",
+    "access": null,
+    "export": false,
+    "importPath": "webcom-reach/src/adapter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/constants.js",
+    "memberof": null,
+    "longname": "src/constants.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 6,
+    "content": "/**\n * OPENED\n * @ignore\n * @type {string}\n */\nexport const OPENED = 'OPENED';\n/**\n * CLOSED\n * @ignore\n * @type {string}\n */\nexport const CLOSED = 'CLOSED';\n/**\n * CONNECTED\n * @ignore\n * @type {string}\n */\nexport const CONNECTED = 'CONNECTED';\n/**\n * NOT_CONNECTED\n * @ignore\n * @type {string}\n */\nexport const NOT_CONNECTED = 'NOT_CONNECTED';\n/**\n * WAS_CONNECTED\n * @ignore\n * @type {string}\n */\nexport const WAS_CONNECTED = 'WAS_CONNECTED';\n/**\n * OWNER\n * @ignore\n * @type {string}\n */\nexport const OWNER = 'OWNER';\n/**\n * MODERATOR\n * @ignore\n * @type {string}\n */\nexport const MODERATOR = 'MODERATOR';\n/**\n * PARTICIPANT\n * @ignore\n * @type {string}\n */\nexport const PARTICIPANT = 'PARTICIPANT';\n/**\n * Ongoing invitation\n * @ignore\n * @type {string}\n */\nexport const ONGOING = 'ONGOING';\n/**\n * Accepted invitation\n * @ignore\n * @type {string}\n */\nexport const ACCEPTED = 'ACCEPTED';\n/**\n * Rejected invitation\n * @ignore\n * @type {string}\n */\nexport const REJECTED = 'REJECTED';\n/**\n * Canceled invitation\n * @ignore\n * @type {string}\n */\nexport const CANCELED = 'CANCELED';\n"
+  },
+  {
+    "__docId__": 26,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "OPENED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~OPENED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{OPENED}",
+    "description": "OPENED",
+    "lineNumber": 6,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "CLOSED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~CLOSED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{CLOSED}",
+    "description": "CLOSED",
+    "lineNumber": 12,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "CONNECTED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~CONNECTED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{CONNECTED}",
+    "description": "CONNECTED",
+    "lineNumber": 18,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "NOT_CONNECTED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~NOT_CONNECTED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{NOT_CONNECTED}",
+    "description": "NOT_CONNECTED",
+    "lineNumber": 24,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "WAS_CONNECTED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~WAS_CONNECTED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{WAS_CONNECTED}",
+    "description": "WAS_CONNECTED",
+    "lineNumber": 30,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "OWNER",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~OWNER",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{OWNER}",
+    "description": "OWNER",
+    "lineNumber": 36,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "MODERATOR",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~MODERATOR",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{MODERATOR}",
+    "description": "MODERATOR",
+    "lineNumber": 42,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "PARTICIPANT",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~PARTICIPANT",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{PARTICIPANT}",
+    "description": "PARTICIPANT",
+    "lineNumber": 48,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ONGOING",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~ONGOING",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{ONGOING}",
+    "description": "Ongoing invitation",
+    "lineNumber": 54,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ACCEPTED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~ACCEPTED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{ACCEPTED}",
+    "description": "Accepted invitation",
+    "lineNumber": 60,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 36,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "REJECTED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~REJECTED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{REJECTED}",
+    "description": "Rejected invitation",
+    "lineNumber": 66,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 37,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "CANCELED",
+    "memberof": "src/constants.js",
+    "longname": "src/constants.js~CANCELED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/constants.js",
+    "importStyle": "{CANCELED}",
+    "description": "Canceled invitation",
+    "lineNumber": 72,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/core/Invite.js",
+    "memberof": null,
+    "longname": "src/core/Invite.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {ONGOING, ACCEPTED, REJECTED, CANCELED} from '../constants';\n\n/**\n * Invitation\n * @access protected\n */\nexport default class Invite {\n\t/**\n\t * The room associated to the invite\n\t * @type {Room}\n\t */\n\tget room() {\n\t\treturn null;\n\t}\n\n\t/**\n\t * The invitation status :\n\t * - ONGOING - The receiver has not yet responded to the invitation\n\t * - ACCEPTED - The receiver has accepted the invitation\n\t * - REJECTED - The receiver has rejected the invitation\n\t * - CANCELED - The sender canceled the invitation\n\t * @type {string}\n\t */\n\tget status() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * Is this invitation waiting for a reply ?\n\t * @type {boolean}\n\t */\n\tget isOnGoing() {\n\t\treturn this.status === ONGOING;\n\t}\n\n\t/**\n\t * Was this invitation rejected ?\n\t * @type {boolean}\n\t */\n\tget isRejected() {\n\t\treturn this.status === REJECTED;\n\t}\n\n\t/**\n\t * Was this invitation accepted ?\n\t * @type {boolean}\n\t */\n\tget isAccepted() {\n\t\treturn this.status === ACCEPTED;\n\t}\n\n\t/**\n\t * Was this invitation canceled ?\n\t * @type {boolean}\n\t */\n\tget isCanceled() {\n\t\treturn this.status === CANCELED;\n\t}\n\n\t/**\n\t * The invitation sender\n\t * @type {string}\n\t */\n\tget from() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * The invitation receiver\n\t * @type {string}\n\t */\n\tget to() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * The invitation cancel/reject reason if present\n\t * @type {?string}\n\t */\n\tget reason() {\n\t\treturn null;\n\t}\n\t/**\n\t * Cancels the invitation. Only the sender can cancel the invitation.\n\t * @param {string} [reason] The reason the sender is canceling the invite\n\t * @return {Promise}\n\t */\n\tcancel() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Rejects the invitation. Only the reveicer can reject the invitation.\n\t * @param {string} [reason] The reason the receiver is rejecting the invite\n\t * @return {Promise}\n\t */\n\treject(reason) {\n\t\treturn new Promise(reason);\n\t}\n\n\t/**\n\t * Accept the invitation. Only the reveicer can accept the invitation.\n\t * @return {Promise}\n\t */\n\taccept() {\n\t\treturn new Promise();\n\t}\n}\n"
+  },
+  {
+    "__docId__": 39,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Invite",
+    "memberof": "src/core/Invite.js",
+    "longname": "src/core/Invite.js~Invite",
+    "access": "protected",
+    "export": true,
+    "importPath": "webcom-reach/src/core/Invite.js",
+    "importStyle": "Invite",
+    "description": "Invitation",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "room",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#room",
+    "access": null,
+    "description": "The room associated to the invite",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Room"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "status",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#status",
+    "access": null,
+    "description": "The invitation status :\n- ONGOING - The receiver has not yet responded to the invitation\n- ACCEPTED - The receiver has accepted the invitation\n- REJECTED - The receiver has rejected the invitation\n- CANCELED - The sender canceled the invitation",
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 42,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "isOnGoing",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#isOnGoing",
+    "access": null,
+    "description": "Is this invitation waiting for a reply ?",
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 43,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "isRejected",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#isRejected",
+    "access": null,
+    "description": "Was this invitation rejected ?",
+    "lineNumber": 40,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 44,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "isAccepted",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#isAccepted",
+    "access": null,
+    "description": "Was this invitation accepted ?",
+    "lineNumber": 48,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 45,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "isCanceled",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#isCanceled",
+    "access": null,
+    "description": "Was this invitation canceled ?",
+    "lineNumber": 56,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 46,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "from",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#from",
+    "access": null,
+    "description": "The invitation sender",
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 47,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "to",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#to",
+    "access": null,
+    "description": "The invitation receiver",
+    "lineNumber": 72,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 48,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "reason",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#reason",
+    "access": null,
+    "description": "The invitation cancel/reject reason if present",
+    "lineNumber": 80,
+    "type": {
+      "nullable": true,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "cancel",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#cancel",
+    "access": null,
+    "description": "Cancels the invitation. Only the sender can cancel the invitation.",
+    "lineNumber": 88,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "reason",
+        "description": "The reason the sender is canceling the invite"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "reject",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#reject",
+    "access": null,
+    "description": "Rejects the invitation. Only the reveicer can reject the invitation.",
+    "lineNumber": 97,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "reason",
+        "description": "The reason the receiver is rejecting the invite"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 51,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "accept",
+    "memberof": "src/core/Invite.js~Invite",
+    "longname": "src/core/Invite.js~Invite#accept",
+    "access": null,
+    "description": "Accept the invitation. Only the reveicer can accept the invitation.",
+    "lineNumber": 105,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/core/Room.js",
+    "memberof": null,
+    "longname": "src/core/Room.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * Room informations\n * @public\n */\nexport default class Room {\n\t/**\n\t * Get the room unique id\n\t * @type {string}\n\t */\n\tget uid(){\n\t\treturn '';\n\t}\n\n\t/**\n\t * Get the room name\n\t * @type {string}\n\t */\n\tget name(){\n\t\treturn '';\n\t}\n\n\t/**\n\t * Get the room owner uid\n\t * @type {string}\n\t */\n\tget owner() {\n\t\treturn '';\n\t}\n\t/**\n\t * Get the room status\n\t * @type {RoomStatus}\n\t */\n\tget status() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * Get the list of participants.\n\t * This will only work if the user is either a participant or the owner of the room.\n\t * @returns {Promise<Participant[], Error>}\n\t */\n\tparticipants() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Get the list of messages.\n\t * This will only work if the user is either a participant or the owner of the room.\n\t * @return {Promise<Message[], Error>}\n\t */\n\tmessages() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Get the list of published streams.\n\t * This will only work if the user is either a participant or the owner of the room.\n\t * @return {Promise<Stream[], Error>}\n\t */\n\tstreams() {\n\t\treturn new Promise();\n\t}\n\n\t/**\n\t * Invite users to the room. this will only work if the current User is the owner or a moderator of this Room.\n\t * This will create the invitation and add the user to the participants list.\n\t * @param {User[]} users the users to invite\n\t * @param {string} [role='NONE'] the role of the invitee\n\t * @param {string} [message] a message to add to the invite\n\t * @return {Promise<{room: Room, invite: Invite}>, Error}\n\t */\n\tinvite(users, role = 'NONE', message) {\n\t\treturn new Promise({users, role, message});\n\t}\n\n\t/**\n\t * Register a callback for a specific event\n\t * @param {string} event The event name.\n\t * @param {function} callback The callback for the event\n\t */\n\ton(event, callback) {\n\t\tswitch (event) {\n\t\tcase 'PARTICIPANT_ADDED':\n\t\t\tbreak;\n\t\tcase 'PARTICIPANT_CHANGED':\n\t\t\tbreak;\n\t\tcase 'PARTICIPANT_REMOVED':\n\t\t\tbreak;\n\t\tcase 'MESSAGE_ADDED':\n\t\t\tbreak;\n\t\tcase 'MESSAGE_CHANGED':\n\t\t\tbreak;\n\t\tcase 'MESSAGE_REMOVED':\n\t\t\tbreak;\n\t\tcase 'STREAM_PUBLISHED':\n\t\t\tbreak;\n\t\tcase 'STREAM_CHANGED':\n\t\t\tbreak;\n\t\tcase 'STREAM_UNPUBLISHED':\n\t\t\tbreak;\n\t\t}\n\t\tcallback();\n\t}\n\n\t/**\n\t * Send an instant message\n\t * @param {string} message The message to send\n\t * @return {Promise}\n\t */\n\tsendMessage(message) {\n\t\treturn new Promise(message);\n\t}\n\n\t/**\n\t * Publish a local stream\n\t * @param {StreamType} type The stream type\n\t * @param {?Element} localStreamElement The element the stream is attached to. Can be null if already specified in ReachConfig.\n\t * @param {?MediaConstraints} constraints The stream constraints. If not defined the constraints defined in ReachConfig will be used.\n\t * @returns {Promise<Stream, Error>}\n\t */\n\tpublishStream(type, localStreamElement, constraints) {\n\t\treturn new Promise({type, localStreamElement, constraints});\n\t}\n}\n"
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Room",
+    "memberof": "src/core/Room.js",
+    "longname": "src/core/Room.js~Room",
+    "access": "public",
+    "export": true,
+    "importPath": "webcom-reach/src/core/Room.js",
+    "importStyle": "Room",
+    "description": "Room informations",
+    "lineNumber": 5,
+    "interface": false
+  },
+  {
+    "__docId__": 54,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "uid",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#uid",
+    "access": null,
+    "description": "Get the room unique id",
+    "lineNumber": 10,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "name",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#name",
+    "access": null,
+    "description": "Get the room name",
+    "lineNumber": 18,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "owner",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#owner",
+    "access": null,
+    "description": "Get the room owner uid",
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "status",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#status",
+    "access": null,
+    "description": "Get the room status",
+    "lineNumber": 33,
+    "type": {
+      "nullable": null,
+      "types": [
+        "RoomStatus"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "participants",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#participants",
+    "access": null,
+    "description": "Get the list of participants.\nThis will only work if the user is either a participant or the owner of the room.",
+    "lineNumber": 42,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Participant[], Error>}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Participant[], Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "messages",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#messages",
+    "access": null,
+    "description": "Get the list of messages.\nThis will only work if the user is either a participant or the owner of the room.",
+    "lineNumber": 51,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Message[], Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "streams",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#streams",
+    "access": null,
+    "description": "Get the list of published streams.\nThis will only work if the user is either a participant or the owner of the room.",
+    "lineNumber": 60,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Stream[], Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "invite",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#invite",
+    "access": null,
+    "description": "Invite users to the room. this will only work if the current User is the owner or a moderator of this Room.\nThis will create the invitation and add the user to the participants list.",
+    "lineNumber": 72,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "User[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "users",
+        "description": "the users to invite"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'NONE'",
+        "defaultRaw": "'NONE'",
+        "name": "role",
+        "description": "the role of the invitee"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "a message to add to the invite"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<{room: Room, invite: Invite}>, Error"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "on",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#on",
+    "access": null,
+    "description": "Register a callback for a specific event",
+    "lineNumber": 81,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "The event name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "The callback for the event"
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "sendMessage",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#sendMessage",
+    "access": null,
+    "description": "Send an instant message",
+    "lineNumber": 110,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "The message to send"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "publishStream",
+    "memberof": "src/core/Room.js~Room",
+    "longname": "src/core/Room.js~Room#publishStream",
+    "access": null,
+    "description": "Publish a local stream",
+    "lineNumber": 121,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Stream, Error>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "StreamType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "The stream type"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Element"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "localStreamElement",
+        "description": "The element the stream is attached to. Can be null if already specified in ReachConfig."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "MediaConstraints"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "constraints",
+        "description": "The stream constraints. If not defined the constraints defined in ReachConfig will be used."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Stream, Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/core/User.js",
+    "memberof": null,
+    "longname": "src/core/User.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * User informations\n * @public\n */\nexport default class User {\n\t/**\n\t * Get user's name\n\t * @type {string}\n\t */\n\tget name() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * Get user status\n\t * @type {string}\n\t */\n\tget status() {\n\t\treturn '';\n\t}\n\n\t/**\n\t * Invite a user directly. This will create a new Room, log you in it & invite the user.\n\t * @param {string} [message] a message to add to the invite\n\t * @return {Promise<{room: Room, invite: Invite}, Error>}\n\t */\n\tinvite(message) {\n\t\treturn new Promise(message);\n\t}\n}\n"
+  },
+  {
+    "__docId__": 66,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "User",
+    "memberof": "src/core/User.js",
+    "longname": "src/core/User.js~User",
+    "access": "public",
+    "export": true,
+    "importPath": "webcom-reach/src/core/User.js",
+    "importStyle": "User",
+    "description": "User informations",
+    "lineNumber": 5,
+    "interface": false
+  },
+  {
+    "__docId__": 67,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "name",
+    "memberof": "src/core/User.js~User",
+    "longname": "src/core/User.js~User#name",
+    "access": null,
+    "description": "Get user's name",
+    "lineNumber": 10,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 68,
+    "kind": "get",
+    "static": false,
+    "variation": null,
+    "name": "status",
+    "memberof": "src/core/User.js~User",
+    "longname": "src/core/User.js~User#status",
+    "access": null,
+    "description": "Get user status",
+    "lineNumber": 18,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "invite",
+    "memberof": "src/core/User.js~User",
+    "longname": "src/core/User.js~User#invite",
+    "access": null,
+    "description": "Invite a user directly. This will create a new Room, log you in it & invite the user.",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": "a message to add to the invite"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<{room: Room, invite: Invite}, Error>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/definitions/BrowserDetails.js",
+    "memberof": null,
+    "longname": "src/definitions/BrowserDetails.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "content": "/**\n * The current browser's infos\n * @typedef {Object} BrowserDetails\n * @property {string} browser - current browser's name\n * @property {?number} version - current browser's version\n * @property {?number} minVersion - current browser's minimum supported version\n * @property {boolean} compatible - is current browser supported ?\n */\n"
+  },
+  {
+    "__docId__": 71,
+    "kind": "typedef",
+    "static": true,
+    "variation": null,
+    "name": "BrowserDetails",
+    "memberof": "src/definitions/BrowserDetails.js",
+    "longname": "src/definitions/BrowserDetails.js~BrowserDetails",
+    "access": null,
+    "description": "The current browser's infos",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "browser",
+        "description": "current browser's name"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "version",
+        "description": "current browser's version"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "minVersion",
+        "description": "current browser's minimum supported version"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "compatible",
+        "description": "is current browser supported ?"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "BrowserDetails"
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/definitions/Events.js",
+    "memberof": null,
+    "longname": "src/definitions/Events.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "content": "/**\n * The supported events by Reach#on, Room#on, Stream#on...\n * @typedef {Object} Events\n * @property {string} USER_ADDED='USER_ADDED'\n * @property {string} USER_CHANGED='USER_CHANGED'\n * @property {string} USER_REMOVED='USER_REMOVED'\n * @property {string} ROOM_ADDED='ROOM_ADDED'\n * @property {string} ROOM_CHANGED='ROOM_CHANGED'\n * @property {string} ROOM_REMOVED='ROOM_REMOVED'\n * @property {string} INVITE_ADDED='INVITE_ADDED'\n * @property {string} INVITE_CHANGED='INVITE_CHANGED'\n * @property {string} PARTICIPANT_ADDED='PARTICIPANT_ADDED'\n * @property {string} PARTICIPANT_CHANGED='PARTICIPANT_CHANGED'\n * @property {string} PARTICIPANT_REMOVED='PARTICIPANT_REMOVED'\n * @property {string} MESSAGE_ADDED='MESSAGE_ADDED'\n * @property {string} MESSAGE_CHANGED='MESSAGE_CHANGED'\n * @property {string} MESSAGE_REMOVED='MESSAGE_REMOVED'\n * @property {string} STREAM_PUBLISHED='STREAM_PUBLISHED'\n * @property {string} STREAM_CHANGED='STREAM_CHANGED'\n * @property {string} STREAM_UNPUBLISHED='STREAM_UNPUBLISHED'\n */\n/**\n* @ignore\n*/\nexport const USER_ADDED = 'USER_ADDED';\n/**\n* @ignore\n*/\nexport const USER_CHANGED = 'USER_CHANGED';\n/**\n* @ignore\n*/\nexport const USER_REMOVED = 'USER_REMOVED';\n/**\n* @ignore\n*/\nexport const ROOM_ADDED = 'ROOM_ADDED';\n/**\n* @ignore\n*/\nexport const ROOM_CHANGED = 'ROOM_CHANGED';\n/**\n* @ignore\n*/\nexport const ROOM_REMOVED = 'ROOM_REMOVED';\n/**\n* @ignore\n*/\nexport const INVITE_ADDED = 'INVITE_ADDED';\n/**\n* @ignore\n*/\nexport const INVITE_CHANGED = 'INVITE_CHANGED';\n/**\n* @ignore\n*/\nexport const MESSAGE_ADDED = 'MESSAGE_ADDED';\n/**\n* @ignore\n*/\nexport const MESSAGE_CHANGED = 'MESSAGE_CHANGED';\n/**\n* @ignore\n*/\nexport const MESSAGE_REMOVED = 'MESSAGE_REMOVED';\n/**\n* @ignore\n*/\nexport const PARTICIPANT_ADDED = 'PARTICIPANT_ADDED';\n/**\n* @ignore\n*/\nexport const PARTICIPANT_CHANGED = 'PARTICIPANT_CHANGED';\n/**\n* @ignore\n*/\nexport const PARTICIPANT_REMOVED = 'PARTICIPANT_REMOVED';\n/**\n* @ignore\n*/\nexport const STREAM_PUBLISHED = 'STREAM_PUBLISHED';\n/**\n* @ignore\n*/\nexport const STREAM_CHANGED = 'STREAM_CHANGED';\n/**\n* @ignore\n*/\nexport const STREAM_UNPUBLISHED = 'STREAM_UNPUBLISHED';\n\nexport default {\n\tUSER_ADDED, USER_CHANGED, USER_REMOVED,\n\tROOM_ADDED, ROOM_CHANGED, ROOM_REMOVED,\n\tINVITE_ADDED, INVITE_CHANGED,\n\tMESSAGE_ADDED, MESSAGE_CHANGED, MESSAGE_REMOVED,\n\tPARTICIPANT_ADDED, PARTICIPANT_CHANGED, PARTICIPANT_REMOVED,\n\tSTREAM_PUBLISHED, STREAM_CHANGED, STREAM_UNPUBLISHED\n};\n"
+  },
+  {
+    "__docId__": 73,
+    "kind": "typedef",
+    "static": true,
+    "variation": null,
+    "name": "Events",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~Events",
+    "access": null,
+    "description": "The supported events by Reach#on, Room#on, Stream#on...",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'USER_ADDED'",
+        "defaultRaw": "'USER_ADDED'",
+        "name": "USER_ADDED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'USER_CHANGED'",
+        "defaultRaw": "'USER_CHANGED'",
+        "name": "USER_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'USER_REMOVED'",
+        "defaultRaw": "'USER_REMOVED'",
+        "name": "USER_REMOVED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'ROOM_ADDED'",
+        "defaultRaw": "'ROOM_ADDED'",
+        "name": "ROOM_ADDED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'ROOM_CHANGED'",
+        "defaultRaw": "'ROOM_CHANGED'",
+        "name": "ROOM_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'ROOM_REMOVED'",
+        "defaultRaw": "'ROOM_REMOVED'",
+        "name": "ROOM_REMOVED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'INVITE_ADDED'",
+        "defaultRaw": "'INVITE_ADDED'",
+        "name": "INVITE_ADDED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'INVITE_CHANGED'",
+        "defaultRaw": "'INVITE_CHANGED'",
+        "name": "INVITE_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'PARTICIPANT_ADDED'",
+        "defaultRaw": "'PARTICIPANT_ADDED'",
+        "name": "PARTICIPANT_ADDED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'PARTICIPANT_CHANGED'",
+        "defaultRaw": "'PARTICIPANT_CHANGED'",
+        "name": "PARTICIPANT_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'PARTICIPANT_REMOVED'",
+        "defaultRaw": "'PARTICIPANT_REMOVED'",
+        "name": "PARTICIPANT_REMOVED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'MESSAGE_ADDED'",
+        "defaultRaw": "'MESSAGE_ADDED'",
+        "name": "MESSAGE_ADDED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'MESSAGE_CHANGED'",
+        "defaultRaw": "'MESSAGE_CHANGED'",
+        "name": "MESSAGE_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'MESSAGE_REMOVED'",
+        "defaultRaw": "'MESSAGE_REMOVED'",
+        "name": "MESSAGE_REMOVED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'STREAM_PUBLISHED'",
+        "defaultRaw": "'STREAM_PUBLISHED'",
+        "name": "STREAM_PUBLISHED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'STREAM_CHANGED'",
+        "defaultRaw": "'STREAM_CHANGED'",
+        "name": "STREAM_CHANGED",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'STREAM_UNPUBLISHED'",
+        "defaultRaw": "'STREAM_UNPUBLISHED'",
+        "name": "STREAM_UNPUBLISHED",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Events"
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "USER_ADDED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~USER_ADDED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{USER_ADDED}",
+    "description": "",
+    "lineNumber": 25,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "USER_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~USER_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{USER_CHANGED}",
+    "description": "",
+    "lineNumber": 29,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "USER_REMOVED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~USER_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{USER_REMOVED}",
+    "description": "",
+    "lineNumber": 33,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ROOM_ADDED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~ROOM_ADDED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{ROOM_ADDED}",
+    "description": "",
+    "lineNumber": 37,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ROOM_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~ROOM_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{ROOM_CHANGED}",
+    "description": "",
+    "lineNumber": 41,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ROOM_REMOVED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~ROOM_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{ROOM_REMOVED}",
+    "description": "",
+    "lineNumber": 45,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "INVITE_ADDED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~INVITE_ADDED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{INVITE_ADDED}",
+    "description": "",
+    "lineNumber": 49,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "INVITE_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~INVITE_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{INVITE_CHANGED}",
+    "description": "",
+    "lineNumber": 53,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "MESSAGE_ADDED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~MESSAGE_ADDED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{MESSAGE_ADDED}",
+    "description": "",
+    "lineNumber": 57,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "MESSAGE_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~MESSAGE_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{MESSAGE_CHANGED}",
+    "description": "",
+    "lineNumber": 61,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "MESSAGE_REMOVED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~MESSAGE_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{MESSAGE_REMOVED}",
+    "description": "",
+    "lineNumber": 65,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "PARTICIPANT_ADDED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~PARTICIPANT_ADDED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{PARTICIPANT_ADDED}",
+    "description": "",
+    "lineNumber": 69,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "PARTICIPANT_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~PARTICIPANT_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{PARTICIPANT_CHANGED}",
+    "description": "",
+    "lineNumber": 73,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "PARTICIPANT_REMOVED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~PARTICIPANT_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{PARTICIPANT_REMOVED}",
+    "description": "",
+    "lineNumber": 77,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "STREAM_PUBLISHED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~STREAM_PUBLISHED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{STREAM_PUBLISHED}",
+    "description": "",
+    "lineNumber": 81,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "STREAM_CHANGED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~STREAM_CHANGED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{STREAM_CHANGED}",
+    "description": "",
+    "lineNumber": 85,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "STREAM_UNPUBLISHED",
+    "memberof": "src/definitions/Events.js",
+    "longname": "src/definitions/Events.js~STREAM_UNPUBLISHED",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/Events.js",
+    "importStyle": "{STREAM_UNPUBLISHED}",
+    "description": "",
+    "lineNumber": 89,
+    "ignore": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/definitions/ICEServer.js",
+    "memberof": null,
+    "longname": "src/definitions/ICEServer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 8,
+    "content": "/**\n * TURN/STUN server configuration\n * @typedef {Object} ICEServer\n * @property {string} url - The server url. (*stun:<ip|hostname>:<port>* or *turn:<ip|hostname>:<port?>*)\n * @property {string} [username] - The user name for this server\n * @property {string} [credential] - The password for this server\n */\n"
+  },
+  {
+    "__docId__": 92,
+    "kind": "typedef",
+    "static": true,
+    "variation": null,
+    "name": "ICEServer",
+    "memberof": "src/definitions/ICEServer.js",
+    "longname": "src/definitions/ICEServer.js~ICEServer",
+    "access": null,
+    "description": "TURN/STUN server configuration",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "The server url. (*stun:<ip|hostname>:<port>* or *turn:<ip|hostname>:<port?>*)"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "username",
+        "description": "The user name for this server"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "credential",
+        "description": "The password for this server"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "ICEServer"
+    }
+  },
+  {
+    "__docId__": 93,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/definitions/ReachConfig.js",
+    "memberof": null,
+    "longname": "src/definitions/ReachConfig.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "content": "/**\n * Reach config object\n * @typedef {Object} ReachConfig\n * @property {string|Element} [localStreamElement] - The id/element dom element that will hold the local video/audio stream\n * @property {string|Element} [remoteStreamElement] - The id/element dom element that will hold the remote video/audio stream\n * @property {boolean} [autoRequestMedia=true] - Immediately ask for camera access\n * @property {MediaConstraints} [mediaConstraints] - The default media constraints. These can be overriden when subscribing to a stream.\n * @property {ICEServer[]} [iceServers] - List of TURN/STUN servers to use for ICE. This list will be merged with the ICE servers declared in the namespace (**_/ice**).\n */\nexport default {\n\tautoRequestMedia: true,\n\tlocalStreamElement: null,\n\tremoteStreamElement: null,\n\tconstraints: null\n};\n"
+  },
+  {
+    "__docId__": 94,
+    "kind": "typedef",
+    "static": true,
+    "variation": null,
+    "name": "ReachConfig",
+    "memberof": "src/definitions/ReachConfig.js",
+    "longname": "src/definitions/ReachConfig.js~ReachConfig",
+    "access": null,
+    "description": "Reach config object",
+    "lineNumber": 10,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Element"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "localStreamElement",
+        "description": "The id/element dom element that will hold the local video/audio stream"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Element"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "remoteStreamElement",
+        "description": "The id/element dom element that will hold the remote video/audio stream"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "autoRequestMedia",
+        "description": "Immediately ask for camera access"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "MediaConstraints"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "mediaConstraints",
+        "description": "The default media constraints. These can be overriden when subscribing to a stream."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "ICEServer[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "iceServers",
+        "description": "List of TURN/STUN servers to use for ICE. This list will be merged with the ICE servers declared in the namespace (**_/ice**)."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "ReachConfig"
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/definitions/StreamTypes.js",
+    "memberof": null,
+    "longname": "src/definitions/StreamTypes.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "content": "/**\n * The available stream types\n * @typedef {Object} StreamTypes\n * @property {string} AUDIO='audio' - Audio communication service\n * @property {string} VIDEO='video' - Video communication service\n * @property {string} AUDIO_VIDEO='audio-video' - Audio and video communication service\n * @property {string} CHAT='chat' - Chat communication service\n * @property {string} SCREEN_SHARING='screen-sharing' - Screen-sharing communication service\n * @property {string} CALL='call' - Call communication service\n */\n\n /**\n  * Audio communication service\n  * @ignore\n  * @type {string}\n  */\n export const AUDIO = 'audio';\n /**\n  * Video communication service\n  * @ignore\n  * @type {string}\n  */\n export const VIDEO = 'video';\n /**\n  * Chat communication service\n  * @ignore\n  * @type {string}\n  */\n export const CHAT = 'chat';\n /**\n  * Audio and video communication service\n  * @ignore\n  * @type {string}\n  */\n export const AUDIO_VIDEO = 'audio-video';\n /**\n  * Screen-sharing service\n  * @ignore\n  * @type {string}\n  */\n export const SCREEN_SHARING = 'screen-sharing';\n /**\n  * Call communication service\n  * @ignore\n  * @type {string}\n  */\n export const CALL = 'call';\n\n export default {AUDIO, VIDEO, CHAT, AUDIO_VIDEO, SCREEN_SHARING, CALL};\n"
+  },
+  {
+    "__docId__": 96,
+    "kind": "typedef",
+    "static": true,
+    "variation": null,
+    "name": "StreamTypes",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~StreamTypes",
+    "access": null,
+    "description": "The available stream types",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'audio'",
+        "defaultRaw": "'audio'",
+        "name": "AUDIO",
+        "description": "Audio communication service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'video'",
+        "defaultRaw": "'video'",
+        "name": "VIDEO",
+        "description": "Video communication service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'audio-video'",
+        "defaultRaw": "'audio-video'",
+        "name": "AUDIO_VIDEO",
+        "description": "Audio and video communication service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'chat'",
+        "defaultRaw": "'chat'",
+        "name": "CHAT",
+        "description": "Chat communication service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'screen-sharing'",
+        "defaultRaw": "'screen-sharing'",
+        "name": "SCREEN_SHARING",
+        "description": "Screen-sharing communication service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "'call'",
+        "defaultRaw": "'call'",
+        "name": "CALL",
+        "description": "Call communication service"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "StreamTypes"
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "AUDIO",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~AUDIO",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{AUDIO}",
+    "description": "Audio communication service",
+    "lineNumber": 17,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "VIDEO",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~VIDEO",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{VIDEO}",
+    "description": "Video communication service",
+    "lineNumber": 23,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "CHAT",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~CHAT",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{CHAT}",
+    "description": "Chat communication service",
+    "lineNumber": 29,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "AUDIO_VIDEO",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~AUDIO_VIDEO",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{AUDIO_VIDEO}",
+    "description": "Audio and video communication service",
+    "lineNumber": 35,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SCREEN_SHARING",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~SCREEN_SHARING",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{SCREEN_SHARING}",
+    "description": "Screen-sharing service",
+    "lineNumber": 41,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "CALL",
+    "memberof": "src/definitions/StreamTypes.js",
+    "longname": "src/definitions/StreamTypes.js~CALL",
+    "access": null,
+    "export": true,
+    "importPath": "webcom-reach/src/definitions/StreamTypes.js",
+    "importStyle": "{CALL}",
+    "description": "Call communication service",
+    "lineNumber": 47,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/external/Element.js",
+    "memberof": null,
+    "longname": "src/external/Element.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 4,
+    "content": "/**\n * @external {Element} https://developer.mozilla.org/en-US/docs/Web/API/Element\n */\n"
+  },
+  {
+    "__docId__": 104,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "src/external/Element.js",
+    "longname": "src/external/Element.js~Element",
+    "access": null,
+    "description": ""
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/external/Webcom.js",
+    "memberof": null,
+    "longname": "src/external/Webcom.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 4,
+    "content": "/**\n * @external {Webcom} https://webcom.orange.com/doc/Webcom.html\n */\n"
+  },
+  {
+    "__docId__": 106,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Webcom",
+    "externalLink": "https://webcom.orange.com/doc/Webcom.html",
+    "memberof": "src/external/Webcom.js",
+    "longname": "src/external/Webcom.js~Webcom",
+    "access": null,
+    "description": ""
+  },
+  {
+    "__docId__": 107,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/utils.js",
+    "memberof": null,
+    "longname": "src/utils.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 0,
+    "content": ""
+  },
+  {
+    "__docId__": 109,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 116,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 118,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 125,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 126,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 127,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 128,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 130,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 131,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 132,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 133,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 135,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 136,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 137,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 138,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 139,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 140,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 141,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 143,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 144,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 146,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 147,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 148,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 149,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 150,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 152,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 153,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 154,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 155,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 157,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 158,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 159,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 160,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 161,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 162,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 163,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 164,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]
